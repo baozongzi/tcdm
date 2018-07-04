@@ -1,0 +1,33 @@
+<div class="panel panel-default panel-intro">
+    {:build_heading()}
+
+    <div class="panel-body">
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active in" id="one">
+                <div class="widget-body no-padding">
+                    <div id="toolbar" class="toolbar">
+                        {:build_toolbar('refresh,add,edit,del')}
+                    </div>
+                    <table id="table" class="table table-striped table-bordered table-hover" 
+                           data-operate-edit="{:$auth->check('category/edit')}" 
+                           data-operate-del="{:$auth->check('category/del')}" 
+                           width="100%">
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script id="categorytpl" type="text/html">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-inline" data-toggle="cxselect" data-selects="one,two,tree,four,five">
+                <select class="one form-control" name="pid1" data-url="ajax/category?pid=0"></select>
+                <select class="two form-control" name="pid2" data-url="ajax/category" data-query-name="pid"></select>
+                <select class="tree form-control" name="pid3" data-url="ajax/category" data-query-name="pid"></select>
+                <select class="four form-control" name="pid4" data-url="ajax/category" data-query-name="pid"></select>
+            </div>
+        </div>
+    </div>
+</script>

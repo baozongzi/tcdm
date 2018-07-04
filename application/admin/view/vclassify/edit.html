@@ -1,0 +1,46 @@
+<form id="edit-form" class="form-horizontal form-ajax" role="form" method="POST" action="">
+    
+    <div class="form-group">
+        <label for="pid" class="control-label col-xs-12 col-sm-2">{:__('Parent')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <!-- {:build_select('row[pid]', $list, $row['pid'], ['class'=>'form-control selectpicker', 'required'=>''])} -->
+            <select name="row[pid]" id=""  class="form-control">
+                <option {if $row.pid == 0}selected{/if} value="0">无</option>
+                {foreach name="list" item="vo"}
+                    <option {if $row.pid == $vo.id}selected{/if} value="{$vo.id}">{$vo.title}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="action" class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input type="text" class="form-control" id="title" name="row[title]" value="{$row.title}" data-rule="required" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="weigh" class="control-label col-xs-12 col-sm-2">{:__('Weigh')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input type="text" class="form-control" id="weigh" name="row[weigh]" value="{$row.weigh}" data-rule="required" />
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <label for="row[status]-normal"><input id="row[status]-normal" name="row[status]" {if $row.status == '1'}checked{/if} type="radio" value="1"> 正常</label>
+            <label for="row[status]-normal"><input id="row[status]-normal" name="row[status]" {if $row.status == '0'}checked{/if} type="radio" value="0"> 隐藏</label>
+        </div>
+    </div>
+
+    <div class="form-group hidden layer-footer">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+{include file="auth/rule/tpl" /}

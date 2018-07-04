@@ -1,0 +1,85 @@
+{include file="../application/admin/view/public/upvideo.html" /}
+<form id="add-form" class="form-horizontal form-ajax" role="form" data-toggle="validator" method="POST" action="" style="float: left;">
+    
+    <input type="hidden" name="row[video]" id="videos" value="{$row.video}">
+    <div class="form-group">
+        <label for="c-answer" class="control-label col-xs-12 col-sm-2">{:__('title')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="{$row.title}" >
+        </div>
+    </div>
+
+    {include file="../application/admin/view/public/fee.html" /}
+
+    <div class="form-group">
+        <label for="c-image" class="control-label col-xs-12 col-sm-2">{:__('缩略图')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-image" class="form-control" size="50" name="row[thumb]" type="text" value="{$row.thumb}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-image"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-image"></ul>
+        </div>
+    </div>
+
+    {include file="../application/admin/view/public/artist.html" /}
+    
+    <div class="form-group">
+        <label for="c-description" class="control-label col-xs-12 col-sm-2">{:__('简介')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-description" class="form-control summernote editor" rows="5" name="row[description]" cols="50">{$row.description}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="c-analysis" class="control-label col-xs-12 col-sm-2">{:__('详情')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <!-- <textarea id="c-analysis" class="form-control summernote edit" rows="5" name="row[analysis]" cols="50"></textarea> -->
+            <textarea name="row[content]" id="ueditors" cols="30" rows="10">{$row.content}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('首页展示')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <label for="row[is_index]-normal"><input name="row[is_index]" {if $row.is_index == '1'}checked{/if} type="radio" value="1"> 是</label>
+            <label for="row[is_index]-normal"><input name="row[is_index]" {if $row.is_index == '0'}checked{/if} type="radio" value="0"> 否</label>
+        </div>
+    </div>
+
+    <input type="hidden" value="<?php echo input('cid');?>" name="row[cid]" id="cid">
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed subms">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+
+
+<link rel="stylesheet" href="__CDN__/assets/js/kindeditor/themes/default/default.css" />
+<script charset="utf-8" src="__CDN__/assets/js/kindeditor/jquery-1.7.1.min.js"></script>
+<script charset="utf-8" src="__CDN__/assets/js/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="__CDN__/assets/js/kindeditor/lang/zh_CN.js"></script>
+<script>
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = KindEditor.create('#ueditors',{allowImageUpload:true,resizeType : 1,width:"100%",height:"360px"});
+    });
+    $(function(){
+        $('.is_fee-normal').change(function(){
+            var fee = $(this).val();
+            if(fee == 1){
+                $('#prices').show()
+            }
+            if(fee == 0){
+                $('#prices').hide()
+            }
+        });
+    })
+</script>

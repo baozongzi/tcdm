@@ -1,0 +1,412 @@
+---------------------------------------------------------------
+[ 2018-05-31T14:32:10+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.156030s][吞吐率：6.41req/s] [内存消耗：2,537.68kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002960s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005169s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------223702664055334287689631',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'ad94bd47-cc59-4edb-be65-200ca08ca1b0',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001571s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011368s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.032544s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.005422s ]
+---------------------------------------------------------------
+[ 2018-05-31T14:32:51+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.065351s][吞吐率：15.30req/s] [内存消耗：2,537.09kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002141s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------776061544818419700901618',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '409a1ac3-ce0b-4a81-97df-95aa612c3e73',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000427s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002045s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.011301s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000515s ]
+---------------------------------------------------------------
+[ 2018-05-31T14:34:08+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.066878s][吞吐率：14.95req/s] [内存消耗：2,537.09kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002112s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------726149718707036473017548',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '467e4275-949b-4060-859d-3b252f8f2767',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000434s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002107s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.011575s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000497s ]
+---------------------------------------------------------------
+[ 2018-05-31T14:34:44+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.079131s][吞吐率：12.64req/s] [内存消耗：2,540.62kb] [文件加载：80]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000058s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002630s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------657667526888119426574170',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '1e58a626-4e6c-4d30-a317-b8748b3c0199',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138001',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMSIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000567s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002364s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.010973s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138001' LIMIT 1 [ RunTime:0.000444s ]
+[ error ] [8]未定义变量: string[D:\phpStudy\WWW\fire\application\api\controller\User.php:86]
+---------------------------------------------------------------
+[ 2018-05-31T14:35:30+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.069608s][吞吐率：14.37req/s] [内存消耗：2,540.62kb] [文件加载：80]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002145s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------662899399775533566234737',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'bcb64df9-4a9b-4321-988a-f287de16d741',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138001',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMSIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000584s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002054s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.011442s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138001' LIMIT 1 [ RunTime:0.000421s ]
+[ error ] [8]未定义变量: string[D:\phpStudy\WWW\fire\application\api\controller\User.php:86]
+---------------------------------------------------------------
+[ 2018-05-31T14:35:45+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.080134s][吞吐率：12.48req/s] [内存消耗：2,540.62kb] [文件加载：80]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002390s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------067488422479226158677901',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '5b1d34a3-838c-42d0-b40f-aac217b3c036',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138001',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMSIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000505s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003102s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.012069s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138001' LIMIT 1 [ RunTime:0.000517s ]
+[ error ] [8]未定义变量: string[D:\phpStudy\WWW\fire\application\api\controller\User.php:86]
+---------------------------------------------------------------
+[ 2018-05-31T14:36:09+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.070626s][吞吐率：14.16req/s] [内存消耗：2,540.62kb] [文件加载：80]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002128s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------661365583134069506840851',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'b9a6a5e5-d827-4422-80e5-0415d0d2c009',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138001',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMSIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000504s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002150s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.010751s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138001' LIMIT 1 [ RunTime:0.000422s ]
+[ error ] [8]未定义变量: string[D:\phpStudy\WWW\fire\application\api\controller\User.php:86]
+---------------------------------------------------------------
+[ 2018-05-31T14:36:39+08:00 ] 127.0.0.1 127.0.0.1 POST /api/user/register
+[ info ] fire.cc/api/user/register [运行时间：0.069823s][吞吐率：14.32req/s] [内存消耗：2,540.62kb] [文件加载：80]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002096s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'register',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------704662522299582611181894',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '986cca27-4520-40e0-9348-ef55f28a347d',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138001',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMSIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000455s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->register[ D:\phpStudy\WWW\fire\application\api\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002010s ] mysql:host=127.0.0.1;dbname=fireadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.010451s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` WHERE  `mobile` = '13800138001' LIMIT 1 [ RunTime:0.000387s ]
+[ error ] [8]未定义变量: string[D:\phpStudy\WWW\fire\application\api\controller\User.php:86]

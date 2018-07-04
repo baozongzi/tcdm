@@ -1,0 +1,1817 @@
+---------------------------------------------------------------
+[ 2018-05-30T17:31:15+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/ajax/wipecache?_=1527672671973
+[ info ] yingshi.oyaoyin.com/admin/ajax/wipecache?_=1527672671973 [运行时间：0.024566s][吞吐率：40.71req/s] [内存消耗：2,509.16kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000769s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'wipecache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/videos/soft?ref=addtabs',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  '_' => '1527672671973',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000165s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->wipecache[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000060s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:15+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/fastadmin.min.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/fastadmin.min.css.map [运行时间：0.029407s][吞吐率：34.01req/s] [内存消耗：1,637.63kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000781s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.min.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:15+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/bootstrap.min.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/bootstrap.min.css.map [运行时间：0.033076s][吞吐率：30.23req/s] [内存消耗：1,637.63kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000827s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.min.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:15+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/skins/skin-green.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/skins/skin-green.css.map [运行时间：0.021314s][吞吐率：46.92req/s] [内存消耗：1,637.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000771s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:15+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/backend.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/backend.css.map [运行时间：0.022253s][吞吐率：44.94req/s] [内存消耗：1,637.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002160s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:16+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/ajax/lang?callback=define&controllername=videos&v=1527672675
+[ info ] yingshi.oyaoyin.com/admin/ajax/lang?callback=define&controllername=videos&v=1527672675 [运行时间：0.023838s][吞吐率：41.95req/s] [内存消耗：2,507.88kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000852s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/videos/soft?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'videos',
+  'v' => '1527672675',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000138s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000051s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:16+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/ajax/lang?callback=define&controllername=dashboard&v=1527672675
+[ info ] yingshi.oyaoyin.com/admin/ajax/lang?callback=define&controllername=dashboard&v=1527672675 [运行时间：0.025440s][吞吐率：39.31req/s] [内存消耗：2,511.50kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000837s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1527672675',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000139s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Ajax.php ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000071s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:17+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/videos/soft?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1527672674274
+[ info ] yingshi.oyaoyin.com/admin/videos/soft?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1527672674274 [运行时间：0.035695s][吞吐率：28.02req/s] [内存消耗：3,397.71kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000785s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'videos',
+    2 => 'soft',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/videos/soft?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1527672674274',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000147s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Videos->soft[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Videos.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000060s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000369s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000535s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video_classify` [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video_classify` ORDER BY `weigh`  desc [ RunTime:0.000203s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videos` [ RunTime:0.000524s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videos` WHERE  `status` = 0 ORDER BY `id`  desc LIMIT 1 [ RunTime:0.000183s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videos` WHERE  `status` = 0 ORDER BY `id`  desc LIMIT 0,10 [ RunTime:0.000223s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:31:17+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/videos/index?addtabs=1
+[ info ] yingshi.oyaoyin.com/admin/videos/index?addtabs=1 [运行时间：0.038185s][吞吐率：26.19req/s] [内存消耗：3,548.11kb] [文件加载：86]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000796s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'videos',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/videos/index?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000146s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Videos->index[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Videos.php ]
+[ info ] [ VIEW ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/view/videos/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'ruledata',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000060s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000402s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000654s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000521s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video_classify` [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video_classify` ORDER BY `weigh`  desc [ RunTime:0.000258s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'videos' LIMIT 1 [ RunTime:0.000344s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:31:18+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/backend.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/backend.css.map [运行时间：0.016196s][吞吐率：61.74req/s] [内存消耗：1,637.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000783s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:18+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/fastadmin.min.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/fastadmin.min.css.map [运行时间：0.018241s][吞吐率：54.82req/s] [内存消耗：1,637.63kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000779s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.min.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:18+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/bootstrap.min.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/bootstrap.min.css.map [运行时间：0.031606s][吞吐率：31.64req/s] [内存消耗：1,637.63kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000724s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.min.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:18+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/skins/skin-green.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/skins/skin-green.css.map [运行时间：0.022842s][吞吐率：43.78req/s] [内存消耗：1,637.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008254s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:19+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/ajax/lang?callback=define&controllername=videos&v=1527672677
+[ info ] yingshi.oyaoyin.com/admin/ajax/lang?callback=define&controllername=videos&v=1527672677 [运行时间：0.023803s][吞吐率：42.01req/s] [内存消耗：2,507.88kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000807s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/videos/index?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'videos',
+  'v' => '1527672677',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000160s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000050s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:21+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/videos/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1527672677006
+[ info ] yingshi.oyaoyin.com/admin/videos/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1527672677006 [运行时间：0.037169s][吞吐率：26.90req/s] [内存消耗：3,389.41kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000789s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'videos',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/videos/index?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1527672677006',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000174s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Videos->index[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Videos.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000060s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000402s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000627s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000533s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000443s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video_classify` [ RunTime:0.000460s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video_classify` ORDER BY `weigh`  desc [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_videos` [ RunTime:0.000500s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_videos` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 1 [ RunTime:0.000184s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_videos` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 0,10 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SELECT `title` FROM `fa_video_classify` WHERE  (  id = 0 ) LIMIT 1 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SELECT `title` FROM `fa_video_classify` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000150s ]
+[ sql ] [ SQL ] SELECT `title` FROM `fa_video_classify` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000235s ]
+[ sql ] [ SQL ] SELECT `title` FROM `fa_video_classify` WHERE  (  id = 3 ) LIMIT 1 [ RunTime:0.000138s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:31:22+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/vclassify/index?addtabs=1
+[ info ] yingshi.oyaoyin.com/admin/vclassify/index?addtabs=1 [运行时间：0.039198s][吞吐率：25.51req/s] [内存消耗：3,525.24kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000780s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'vclassify',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/vclassify/index?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000146s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Vclassify->index[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Vclassify.php ]
+[ info ] [ VIEW ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/view/vclassify/index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'ruledata',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000067s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000387s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000655s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video_classify` [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video_classify` ORDER BY `weigh`  desc [ RunTime:0.000215s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'vclassify' LIMIT 1 [ RunTime:0.000460s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:31:22+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/fastadmin.min.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/fastadmin.min.css.map [运行时间：0.017209s][吞吐率：58.11req/s] [内存消耗：1,637.63kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000883s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.min.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:22+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/bootstrap.min.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/bootstrap.min.css.map [运行时间：0.019524s][吞吐率：51.22req/s] [内存消耗：1,637.63kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000833s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.min.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:23+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/backend.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/backend.css.map [运行时间：0.034778s][吞吐率：28.75req/s] [内存消耗：1,637.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000742s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:23+08:00 ] 172.16.125.100 111.196.83.73 GET /assets/css/skins/skin-green.css.map
+[ info ] yingshi.oyaoyin.com/assets/css/skins/skin-green.css.map [运行时间：0.019323s][吞吐率：51.75req/s] [内存消耗：1,637.58kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000835s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:23+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/ajax/lang?callback=define&controllername=vclassify&v=1527672682
+[ info ] yingshi.oyaoyin.com/admin/ajax/lang?callback=define&controllername=vclassify&v=1527672682 [运行时间：0.024313s][吞吐率：41.13req/s] [内存消耗：2,507.90kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000794s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/vclassify/index?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'vclassify',
+  'v' => '1527672682',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000146s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000054s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:31:24+08:00 ] 172.16.125.100 111.196.83.73 GET /admin/vclassify/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1527672681550
+[ info ] yingshi.oyaoyin.com/admin/vclassify/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1527672681550 [运行时间：0.036611s][吞吐率：27.31req/s] [内存消耗：3,361.77kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000841s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'vclassify',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'UM_distinctid=163aef2eb4fbe-0fff6e2ef70702-77143c49-1fa400-163aef2eb507a5; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1527661507; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1527661507; PHPSESSID=fnco8le3iso2ggtm09gl1onf92',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yingshi.oyaoyin.com/admin/vclassify/index?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3223.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1527672681550',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000156s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Vclassify->index[ /home/wwwroot/yingshi.oyaoyin.com/application/admin/controller/Vclassify.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000083s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000459s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.000717s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_video_classify` [ RunTime:0.000544s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_video_classify` ORDER BY `weigh`  desc [ RunTime:0.000187s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:32:04+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.032273s][吞吐率：30.99req/s] [内存消耗：2,968.88kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000827s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000151s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000420s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000436s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000234s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000237s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:32:09+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.026468s][吞吐率：37.78req/s] [内存消耗：2,912.11kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000791s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000146s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:32:11+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.030805s][吞吐率：32.46req/s] [内存消耗：2,968.88kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000806s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000148s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000427s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000795s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000224s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000268s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:32:40+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.029384s][吞吐率：34.03req/s] [内存消耗：2,971.52kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000767s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------865211413371122711197291',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=pc23tmii13j61qsfge8m7d3lo4',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '40409cb1-c8b5-42c7-91a1-09deac8ac671',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000142s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000414s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000801s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000245s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000204s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:33:04+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.030032s][吞吐率：33.30req/s] [内存消耗：2,971.53kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000021s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000819s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------762506477094192429721714',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '3255092f-04e3-40d6-82d4-b58a8fdd6b22',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000151s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000398s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000256s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000277s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:34:55+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.029972s][吞吐率：33.36req/s] [内存消耗：2,971.53kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000798s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------672593983606975518483302',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '545ff15a-527f-4c91-ace4-4a15b8159b54',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000176s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000411s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000876s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000464s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000264s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000218s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:35:28+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.029732s][吞吐率：33.63req/s] [内存消耗：2,971.53kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000812s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------734768213981881550983734',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'ce85a005-0c8a-48b1-9569-fe8efae53be6',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000146s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000458s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000757s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000425s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000266s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000204s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:37:14+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.029744s][吞吐率：33.62req/s] [内存消耗：2,971.52kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000796s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------910163148457899081036434',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=85ruksnn568fgd0fjesq8u3gj2',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'aab47939-df21-4efe-af71-ac76bc807bcc',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000177s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000407s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000254s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:37:49+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.038082s][吞吐率：26.26req/s] [内存消耗：2,971.64kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008627s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------393333864435653851388055',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '14debf18-acee-41d3-bdb1-b56f742cb5df',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d; PHPSESSID=85ruksnn568fgd0fjesq8u3gj2',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000154s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000438s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000268s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000220s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:40:07+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.029456s][吞吐率：33.95req/s] [内存消耗：2,971.64kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000809s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------223312284747995951071527',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'd03c0ac9-5dfd-4dde-bf47-38090bff313f',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d; PHPSESSID=85ruksnn568fgd0fjesq8u3gj2',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000143s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000415s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000799s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000209s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000199s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:40:12+08:00 ] 172.16.125.100 111.196.83.73 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.029654s][吞吐率：33.72req/s] [内存消耗：2,971.64kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000808s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '637',
+  'content-type' => 'multipart/form-data; boundary=--------------------------771440573272068044605307',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'yingshi.oyaoyin.com',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'b7acf0bc-2c15-44d0-9d09-a3eb3b24985e',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d; PHPSESSID=85ruksnn568fgd0fjesq8u3gj2',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000170s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000416s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000761s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000366s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000211s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000214s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:41:08+08:00 ] 172.16.125.100 47.92.126.167 GET /admin/auth/rule?ref=addtabs
+[ info ] yingshi.oyaoyin.com/admin/auth/rule?ref=addtabs [运行时间：0.022995s][吞吐率：43.49req/s] [内存消耗：2,329.93kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000810s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2',
+  'host' => 'yingshi.oyaoyin.com',
+  'user-agent' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/admin/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000150s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/common/view/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000059s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:45:40+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.026755s][吞吐率：37.38req/s] [内存消耗：2,912.67kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000779s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencodeds',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000144s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:45:43+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.029562s][吞吐率：33.83req/s] [内存消耗：2,968.88kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000827s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000142s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000450s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000762s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000217s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000205s ]
+---------------------------------------------------------------
+[ 2018-05-30T17:46:22+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.026441s][吞吐率：37.82req/s] [内存消耗：2,913.49kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000808s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000144s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:47:48+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.026495s][吞吐率：37.74req/s] [内存消耗：2,912.60kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000814s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'access-control-allow-headers' => 'x-requested-with,content-type',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000155s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:48:10+08:00 ] 172.16.125.100 123.207.136.134 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.027137s][吞吐率：36.85req/s] [内存消耗：2,913.49kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000798s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000170s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:50:52+08:00 ] 172.16.125.100 123.207.167.163 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.026469s][吞吐率：37.78req/s] [内存消耗：2,913.49kb] [文件加载：71]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000809s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000146s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-30T17:50:59+08:00 ] 172.16.125.100 123.207.167.163 POST /api/user/login
+[ info ] yingshi.oyaoyin.com/api/user/login [运行时间：0.031403s][吞吐率：31.84req/s] [内存消耗：2,968.88kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000805s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'cookie' => 'access_token=c29d5219fa538cba72850dd69e9aa235a9fd4b74a1989b1747dbc7261e462e7d',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '192',
+  'user-agent' => 'Go-http-client/1.1',
+  'host' => 'yingshi.oyaoyin.com',
+)
+[ info ] [ PARAM ] array (
+  'row' => 
+  array (
+    'mobile' => '13800138000',
+    'password' => '123456',
+    'time' => '1527582939',
+    'base' => 'eyJtb2JpbGUiOiIxMzgwMDEzODAwMCIsInBhc3N3b3JkIjoiMTIzNDU2IiwidGltZSI6IjE1Mjc1ODI5MzkiLCJrZXkiOiJtY3lrai1mb3JldmVyIn0=',
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000171s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ /home/wwwroot/yingshi.oyaoyin.com/application/api/controller/User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000471s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.000837s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user` WHERE  `mobile` = '13800138000' LIMIT 1 [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000247s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`mobile`,`nickname`,`createtime` FROM `fa_user` WHERE  `password` = '70119da1d93181f7002698c187ddd95b' LIMIT 1 [ RunTime:0.000266s ]
+---------------------------------------------------------------
+[ 2018-05-30T23:54:06+08:00 ] 172.16.125.100 101.199.112.55 GET /
+[ info ] yingshi.oyaoyin.com/ [运行时间：0.031872s][吞吐率：31.38req/s] [内存消耗：2,361.08kb] [文件加载：66]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001132s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-charset' => 'iso-8859-1,*,utf-8',
+  'accept-encoding' => 'gzip,deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'keep-alive',
+  'host' => 'yingshi.oyaoyin.com',
+  'content-type' => '',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000245s ]
+[ info ] [ LANG ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /home/wwwroot/yingshi.oyaoyin.com/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /home/wwwroot/yingshi.oyaoyin.com/public/../application/index/view/index/index.html [ array (
+  0 => 'site',
+  1 => 'config',
+) ]
+[ info ] [ LOG ] INIT File

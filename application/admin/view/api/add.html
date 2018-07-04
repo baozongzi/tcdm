@@ -1,0 +1,32 @@
+
+<form id="add-form" class="form-horizontal form-ajax" role="form" data-toggle="validator" method="POST" action="">
+    
+    <div class="form-group" id="prices">
+        <label for="price" class="control-label col-xs-12 col-sm-2">{:__('收费价格')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input type="text" class="form-control" id="price" name="row[price]" value="" data-rule="required" />
+        </div>
+    </div>
+    
+    <div class="form-group hidden layer-footer">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+<script charset="utf-8" src="__CDN__/assets/js/kindeditor/jquery-1.7.1.min.js"></script>
+<script>
+$(function(){
+    $('.is_fee-normal').change(function(){
+        var fee = $(this).val();
+        if(fee == 1){
+            $('#prices').show()
+        }
+        if(fee == 0){
+            $('#prices').hide()
+        }
+    });
+})
+</script>
