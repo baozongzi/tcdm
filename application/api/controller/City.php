@@ -31,14 +31,7 @@ class City extends Api
         $this->page   = input('page') ? input('page') : 1;
         $this->offset = ($this->page - 1) * 10;
         $this->limit  = $this->page * 10;
-        // $this->post = $this->ispost();
-        // if($this->post['count'] == '0'){
-        //     $err['id'] = '0';
-        //     $json_arr = array('status'=>1,'msg'=>'请按套路出牌😏','result'=>$err );
-        //     $json_str = json_encode($json_arr);
-        //     exit($json_str);
-        // }
-        
+        $this->website = model('Config')->where('name', 'website')->value('value');
         // 验证token
         $token = cookie('access_token');
         $this->row = input('row');
@@ -64,7 +57,6 @@ class City extends Api
         $id = $this->row->vid;//视频id
         $userid = $this->userid;//当前登录的用户
         //数据详情
-        $data = $this->model->where('id = '.$id)->find();
         $data = $this->init_thumbs($this->model->where('id = '.$id)->find());
         // 一级栏目查询
         $model = $this->AuthRule->where("tables = '".$this->table."'")->find();
@@ -100,16 +92,31 @@ class City extends Api
 
     // 评论接口
     public function comments(){
-        $data = input('');
-        $user = Db::table('fa_user')->where("id = ".$data['userid'])->field('nickname,head')->find();
+        $userid = $this->row->userid;//当前登录的用户
+        $user = Db::table('fa_user')->where("id = ".$userid)->field('nickname,head')->find();
         $data['inputtime'] = strtotime(date("Y-m-d",time())." ".date('H').":0:0");
-        
         $data['nickname'] = $user['nickname'];
-        $data['head'] = $user['head'];
+        $data['head'] = $this->website.$user['head'];
+        $data['userid'] = $userid;
+        $data['vid'] = $this->row->vid;
+        $data['content'] = $this->row->content;
         $res = Db::table('fa_'.$this->table.'_comment')->insert($data);
         if($res){
-            $message = '评论成功';
-            $this->encode($data,$message);
+            $status = '1';
+            $mes = '评论成功😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
+        }
+    }
+
+    // 收藏
+    public function collectioned(){
+        $data = $this->collectionsed($this->row,$this->table,$this->model);
+        if($data){
+            $status = '1';
+            $mes = '成功😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
         }
     }
 

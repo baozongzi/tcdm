@@ -707,6 +707,7 @@ function _formatUrl(url, mode, host, pathname) {
 		url = getRelativePath(host + pathname, 0).substr(2);
 	} else if (mode === 'absolute') {
 		if (url.substr(0, host.length) === host) {
+			// ------kindeditor图片上传后url不带域名问题终极解决方案：注释以下内容------木zi3石2018.07.04------
 			url = url.substr(host.length);
 		}
 	}

@@ -51,9 +51,7 @@ class Story extends Api
     // 列表页
     public function index(){
         $result = $this->model->field('id,title,inputtime,thumb')->where('status = 1')->order('id desc')->limit($this->offset, $this->limit)->select();
-        // echo "<pre>";
-        // print_r($result);
-        // die;
+        
         $result = $this->init_thumbs($result);
         $status = '1';
         $mes = '获取成功😏';
@@ -102,15 +100,20 @@ class Story extends Api
 
     // 评论接口
     public function comments(){
-        $data = input('');
-        $user = Db::table('fa_user')->where("id = ".$data['userid'])->field('nickname,head')->find();
+        $userid = $this->row->userid;//当前登录的用户
+        $user = Db::table('fa_user')->where("id = ".$userid)->field('nickname,head')->find();
         $data['inputtime'] = strtotime(date("Y-m-d",time())." ".date('H').":0:0");
         $data['nickname'] = $user['nickname'];
-        $data['head'] = $user['head'];
+        $data['head'] = $this->website.$user['head'];
+        $data['userid'] = $userid;
+        $data['vid'] = $this->row->vid;
+        $data['content'] = $this->row->content;
         $res = Db::table('fa_'.$this->table.'_comment')->insert($data);
         if($res){
-            $message = '评论成功';
-            $this->encode($data,$message);
+            $status = '1';
+            $mes = '评论成功😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
         }
     }
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\index\index.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\header.html";i:1527563856;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\menu.html";i:1515575204;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\control.html";i:1527321537;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\index\index.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\header.html";i:1527563856;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\menu.html";i:1528878541;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\control.html";i:1527321537;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -111,7 +111,7 @@
                 <!-- sidebar: style can be found in sidebar.less -->
 <section class="sidebar">
     <!-- Sidebar user panel -->
-    <div class="user-panel hidden-xs">
+    <!-- <div class="user-panel hidden-xs">
         <div class="pull-left image">
             <a href="general/profile" class="addtabsit"><img src="__CDN__<?php echo $admin['avatar']; ?>" class="img-circle" /></a>
         </div>
@@ -119,7 +119,7 @@
             <p><?php echo $admin['nickname']; ?></p>
             <i class="fa fa-circle text-success"></i> <?php echo __('Online'); ?>
         </div>
-    </div>
+    </div> -->
 
     <!-- search form -->
     <form action="" method="get" class="sidebar-form" onsubmit="return false;">

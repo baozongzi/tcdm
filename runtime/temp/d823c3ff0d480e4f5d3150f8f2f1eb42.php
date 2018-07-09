@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\fire\public/../application/common\view\tpl\dispatch_jump.tpl";i:1515575204;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\fire\public/../application/common\view\tpl\dispatch_jump.tpl";i:1528083879;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -40,9 +40,6 @@
                 <a href="javascript:history.go(-1);" class="btn btn-grey">返回上一步</a>
                 <a href="<?php echo($url);?>" class="btn btn-primary">立即跳转</a>
             </p>
-        </div>
-        <div class="copyright">
-            <p>Powered by <a href="http://www.fastadmin.net/?ref=jump">FastAdmin</a></p>
         </div>
         <script type="text/javascript">
             (function () {

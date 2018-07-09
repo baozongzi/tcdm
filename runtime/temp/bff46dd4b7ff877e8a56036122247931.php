@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:75:"D:\phpStudy\WWW\fire\public/../application/admin\view\crowdfunding\add.html";i:1530502580;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:44:"../application/admin/view/public/artist.html";i:1529739022;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"D:\phpStudy\WWW\fire\public/../application/admin\view\variety\edit.html";i:1530502775;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:45:"../application/admin/view/public/upvideo.html";i:1530683938;s:41:"../application/admin/view/public/fee.html";i:1529650325;s:44:"../application/admin/view/public/artist.html";i:1529739022;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,67 +50,106 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+                                
+<div class="form-group">
+    <label for="c-answer" class="control-label col-xs-12 col-sm-2" style="text-align: right;"><?php echo __('上传视频'); ?>:</label>
+    <div class="col-xs-12 col-sm-8">
+        
+        <form id="sc" action="/admin/ajax/upvideo" method="post" enctype="multipart/form-data" target="shangchuan" >
+            <div id="yl">
+                <span class="upspan" >上传视频</span>
+                <input type="file" name="file" id="file" onchange="document.getElementById('sc').submit()" />  <!-- 当点击上传就会提交表单内容 -->
+                <img src="<?php if($row['video'] != ""): ?>/assets/img/videos.jpg<?php endif; ?>" alt="" id="videotp" ><span id="explain" style="padding: 10px;color: green;display: none;">上传成功^_^</span>
+            </div>
+        </form>
+        <iframe style="display:none" name="shangchuan" id="shangchuan"></iframe>
+    </div>
+</div>
+
+
+
+<style>
+.upspan{position: absolute;color: #fff;background-color: #18bc9c;width: 75px; height: 30px;line-height: 30px;text-align: center;border-radius: 5px;left: 10px;}
+#fileupload{opacity: 0;}
+.vids{width: 118px;height: 118px;margin-top: 16px;}
+.vids img{width: 118px;}
+#yl{ height:30px;margin-bottom: 20px;}  /*定义上传文件外层div样式 ，默认背景图片，大小*/
+#file{width: 70px;float: left; opacity: 0; /* z-index: 9; */position: relative;left: -5px;height: 30px;cursor: pointer;}    /*定义上传文件的标签本身样式，标签的大小和外层div一致*/
+#videotp{width: 30px;margin-left: 20px;}
+</style>
+
+<script charset="utf-8" src="__CDN__/assets/js/kindeditor/jquery-1.7.1.min.js"></script>
+<link rel="stylesheet" href="__CDN__/assets/js/kindeditor/themes/default/default.css" />
+<script charset="utf-8" src="__CDN__/assets/js/kindeditor/kindeditor-all.js"></script>
+<script charset="utf-8" src="__CDN__/assets/js/kindeditor/lang/zh_CN.js"></script>
+
+<script>
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = KindEditor.create('#ueditors',{allowImageUpload:true,resizeType : 1,width:"100%",height:"360px"});
+
+    });
+    //回调函数,调用该方法传一个文件路径，该变背景图
+function showimg(url)
+{
+    img = '__CDN__/assets/img/videos.jpg';
+    $("#videotp").attr('src',img); 
+    $("#videos").val(url)
+    $("#videotp").css("width","30px");
+    $("#explain").show();
+}
+</script>
+<form id="add-form" class="form-horizontal form-ajax" role="form" data-toggle="validator" method="POST" action="" style="float: left;">
     
-    <div>
-        <div class="form-group">
+    <input type="hidden" name="row[video]" id="videos" value="<?php echo $row['video']; ?>">
+    <div class="form-group">
         <label for="c-answer" class="control-label col-xs-12 col-sm-2"><?php echo __('title'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-answer" class="form-control" name="row[title]" type="text" value="" >
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="<?php echo $row['title']; ?>" >
         </div>
     </div>
 
-    <div class="form-group">
-        <label for="c-answer" class="control-label col-xs-12 col-sm-2"><?php echo __('总金额'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-answer" class="form-control" name="row[total_money]" type="text" value="" >
-        </div>
+    
+<div class="form-group">
+    <label for="content" class="control-label col-xs-12 col-sm-2"><?php echo __('是否收费'); ?>:</label>
+    <div class="col-xs-12 col-sm-8">
+        <label for="row[is_fee]-normal"><input class="is_fee-normal" name="row[is_fee]" <?php if($row['is_fee'] == '1'): ?>checked<?php endif; ?> type="radio" value="1"> 是</label>
+        <label for="row[is_fee]-normal"><input class="is_fee-normal" name="row[is_fee]" <?php if($row['is_fee'] == '0'): ?>checked<?php endif; ?> type="radio" value="0"> 否</label>
     </div>
+</div>
+<div class="form-group" id="prices" style="<?php if($row['is_fee'] == '0'): ?>display: none;<?php endif; ?>">
+    <label for="price" class="control-label col-xs-12 col-sm-2"><?php echo __('收费价格'); ?>:</label>
+    <div class="col-xs-12 col-sm-8">
+        <input type="text" class="form-control" id="price" name="row[price]" value="<?php echo $row['price']; ?>"/>
+    </div>
+</div>
+<script>
+
+$(function(){
+    $('.is_fee-normal').change(function(){
+        var fee = $(this).val();
+        if(fee == 1){
+            $('#prices').show()
+        }
+        if(fee == 0){
+            $('#prices').hide()
+        }
+    });
+})
+</script>
 
     <div class="form-group">
-        <label for="c-answer" class="control-label col-xs-12 col-sm-2"><?php echo __('总购买数'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-answer" class="form-control" name="row[pay_num]" type="text" value="" >
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="c-answer" class="control-label col-xs-12 col-sm-2"><?php echo __('分成比例'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-answer" class="form-control" name="row[pro]" type="text" value="" >
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="e-time" class="control-label col-xs-12 col-sm-2"><?php echo __('结束时间'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="e-time" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[endtime]" type="text" value="<?php echo date('Y-m-d H:i:s'); ?>">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="c-type" class="control-label col-xs-12 col-sm-2"><?php echo __('赛事阶段'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[successed]">
-                <option value="1"  name="row['successed']" >火热进行中^_^</option>
-                <option value="2"  name="row['successed']" >众筹成功^_^</option>
-                <option value="0"  name="row['successed']" >众筹失败(╥╯^╰╥)</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="c-images" class="control-label col-xs-12 col-sm-2"><?php echo __('缩略图'); ?>:</label>
+        <label for="c-image" class="control-label col-xs-12 col-sm-2"><?php echo __('缩略图'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
-                <input id="c-images" class="form-control" size="50" name="row[thumb]" type="text">
+                <input id="c-image" class="form-control" size="50" name="row[thumb]" type="text" value="<?php echo $row['thumb']; ?>">
                 <div class="input-group-addon no-border no-padding">
-                    <span><button type="button" id="plupload-images" class="btn btn-danger plupload" data-input-id="c-images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-images"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
-                    <span><button type="button" id="fachoose-images" class="btn btn-primary fachoose" data-input-id="c-images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
+                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
                 </div>
-                <span class="msg-box n-right" for="c-images"></span>
+                <span class="msg-box n-right" for="c-image"></span>
             </div>
-            <ul class="row list-inline plupload-preview" id="p-images"></ul>
+            <ul class="row list-inline plupload-preview" id="p-image"></ul>
         </div>
     </div>
 
@@ -249,34 +288,35 @@ function close_artist_img(ids){
     $(".remove_artist_"+ids+"").remove();
 }
 </script>
-
+    
     <div class="form-group">
         <label for="c-description" class="control-label col-xs-12 col-sm-2"><?php echo __('简介'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea id="c-description" class="form-control summernote editor" rows="5" name="row[description]" cols="50"></textarea>
+            <textarea id="c-description" class="form-control summernote editor" rows="5" name="row[description]" cols="50"><?php echo $row['description']; ?></textarea>
         </div>
     </div>
 
     <div class="form-group">
-        <label for="c-analysis" class="control-label col-xs-12 col-sm-2"><?php echo __('内容'); ?>:</label>
+        <label for="c-analysis" class="control-label col-xs-12 col-sm-2"><?php echo __('详情'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <!-- <textarea id="c-analysis" class="form-control summernote edit" rows="5" name="row[analysis]" cols="50"></textarea> -->
-            <textarea name="row[content]" id="ueditors" cols="30" rows="10"></textarea>
+            <textarea name="row[content]" id="ueditors" cols="30" rows="10"><?php echo $row['content']; ?></textarea>
         </div>
     </div>
 
     <div class="form-group">
         <label for="content" class="control-label col-xs-12 col-sm-2"><?php echo __('首页展示'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <label for="row[is_index]-normal"><input name="row[is_index]" type="radio" value="1"> 是</label>
-            <label for="row[is_index]-normal"><input name="row[is_index]" checked type="radio" value="0"> 否</label>
+            <label for="row[is_index]-normal"><input name="row[is_index]" <?php if($row['is_index'] == '1'): ?>checked<?php endif; ?> type="radio" value="1"> 是</label>
+            <label for="row[is_index]-normal"><input name="row[is_index]" <?php if($row['is_index'] == '0'): ?>checked<?php endif; ?> type="radio" value="0"> 否</label>
         </div>
     </div>
 
+    <input type="hidden" value="<?php echo input('cid');?>" name="row[cid]" id="cid">
     <div class="form-group layer-footer">
         <label class="control-label col-xs-12 col-sm-2"></label>
         <div class="col-xs-12 col-sm-8">
-            <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
+            <button type="submit" class="btn btn-success btn-embossed subms"><?php echo __('OK'); ?></button>
             <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
         </div>
     </div>
@@ -291,8 +331,18 @@ function close_artist_img(ids){
     var editor;
     KindEditor.ready(function(K) {
         editor = KindEditor.create('#ueditors',{allowImageUpload:true,resizeType : 1,width:"100%",height:"360px"});
-
     });
+    $(function(){
+        $('.is_fee-normal').change(function(){
+            var fee = $(this).val();
+            if(fee == 1){
+                $('#prices').show()
+            }
+            if(fee == 0){
+                $('#prices').hide()
+            }
+        });
+    })
 </script>
                             </div>
                         </div>

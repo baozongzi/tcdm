@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\auth\rule\edit.html";i:1515575204;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527304699;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\auth\rule\tpl.html";i:1515575204;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527306529;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\auth\rule\edit.html";i:1529550445;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\auth\rule\tpl.html";i:1515575204;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -55,6 +55,15 @@
         <label for="content" class="control-label col-xs-12 col-sm-2"><?php echo __('Ismenu'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <?php echo build_radios('row[ismenu]', ['1'=>__('Yes'), '0'=>__('No')], $row['ismenu']); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="content" class="control-label col-xs-12 col-sm-2"><?php echo __('是否收费'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="radio">
+                <label for="row[is_fee]-normal"><input class="is_fee-normal" name="row[is_fee]" <?php if($row['is_fee'] == '1'): ?>checked<?php endif; ?> type="radio" value="1"> 是</label>
+                <label for="row[is_fee]-normal"><input class="is_fee-normal" name="row[is_fee]" <?php if($row['is_fee'] == '0'): ?>checked<?php endif; ?> type="radio" value="0"> 否</label>
+            </div>
         </div>
     </div>
     <div class="form-group">

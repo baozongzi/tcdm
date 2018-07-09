@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:77:"D:\phpStudy\WWW\fire\public/../application/admin\view\crowdfunding\index.html";i:1530154815;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:68:"D:\phpStudy\WWW\fire\public/../application/admin\view\order\vip.html";i:1530872455;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -58,22 +58,11 @@
             <div class="tab-pane fade active in" id="one">
                 <div class="widget-body no-padding">
                     <div id="toolbar" class="toolbar">
-                        <?php echo build_toolbar('refresh,add,edit,del,import'); ?>
+                        <?php echo build_toolbar('refresh'); ?>
                     </div>
-                    <!-- <div id="toolbar" class="toolbar" style="position: relative;">
-                        <a href="javascript:;" class="btn btn-primary btn-refresh" title="刷新"><i class="fa fa-refresh"></i> </a> 
-                        <a href="javascript:;" class="btn btn-success btn-add" title="添加"><i class="fa fa-plus"></i> 添加</a> 
-                        <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled" title="编辑"><i class="fa fa-pencil"></i> 编辑</a> 
-                        <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled" title="删除"><i class="fa fa-trash"></i> 删除</a> 
-                        <a href="javascript:;" class="btn btn-danger btn-import" title="导入" id="btn-import-YNEzub" data-url="ajax/upload" data-mimetype="csv,xls,xlsx" data-multiple="false" initialized="true" style="position: relative; z-index: 1;"><i class="fa fa-upload"></i> 导入</a> 
-                        <div id="html5_1ch252dlire69m51l0h7cj13rd4_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 2px; left: 239px; width: 64px; height: 31px; overflow: hidden; z-index: 0;">
-                            <input id="html5_1ch252dlire69m51l0h7cj13rd4" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" accept=".csv,.xls,.xlsx" tabindex="-1">
-                        </div>
-                    </div> -->
                     <table id="table" class="table table-striped table-bordered table-hover"
-                           data-operate-edit="<?php echo $auth->check('crowdfunding/edit'); ?>" 
-                           data-operate-show="<?php echo $auth->check('crowdfunding/show'); ?>" 
-                           data-operate-del="<?php echo $auth->check('crowdfunding/del'); ?>"
+                           data-operate-edit="<?php echo $auth->check('videos/edit'); ?>"
+                           data-operate-del="<?php echo $auth->check('videos/del'); ?>"
                            width="100%">
                     </table>
                 </div>
@@ -95,6 +84,14 @@
         </div>
     </div>
 </script>
+
+<script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+    var result = returnCitySN;
+    var city = returnCitySN.cname;
+    var cid = returnCitySN.cid;
+    console.log(result);
+</script> 
                             </div>
                         </div>
                     </div>

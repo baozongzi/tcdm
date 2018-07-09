@@ -377,6 +377,27 @@ class Api extends Controller
         }
         return $is_collected;
     }
+    // 收藏接口
+    public function collectionsed($row,$table,$model){
+        $userid = $row->userid;//当前登录的用户
+        $vid = $row->vid;//当前视频id
+        $status = $row->status;
+        if($status == "0"){
+            $res = Db::table('fa_collection')->where('userid = '.$userid." AND vid = ".$vid." AND tables = '".$table."'")->delete();
+            $data = array();
+        }else{
+            $data['title'] = $this->init_thumbs($model->where('id = '.$vid)->field('title')->find())['title'];
+            $user = Db::table('fa_user')->where("id = ".$userid)->field('nickname,head')->find();
+            $data['inputtime'] = strtotime(date("Y-m-d",time())." ".date('H').":0:0");
+            $data['vid'] = $vid;
+            $data['cid'] = $row->cid;;
+            $data['status'] = $status;
+            $data['userid'] = $userid;
+            $data['tables'] = $this->table;
+            $res = Db::table('fa_collection')->insert($data);
+        }
+        return $data;
+    }
     //评论
     public function comment($userid,$id,$tablename,$offset, $limit){
         $count = Db::table('fa_'.$tablename.'_comment')->where("vid = ".$id)->count();

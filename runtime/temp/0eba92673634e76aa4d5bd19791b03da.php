@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:65:"D:\phpStudy\WWW\fire\public/../application/admin\view\ad\add.html";i:1515575204;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:66:"D:\phpStudy\WWW\fire\public/../application/admin\view\ad\edit.html";i:1515575204;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,14 +50,14 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+                                <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
     <div class="form-group">
         <label for="c-type" class="control-label col-xs-12 col-sm-2"><?php echo __('Type'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[type]">
                 <?php if(is_array($typeList) || $typeList instanceof \think\Collection || $typeList instanceof \think\Paginator): if( count($typeList)==0 ) : echo "" ;else: foreach($typeList as $key=>$vo): ?>
-                <option value="<?php echo $key; ?>" <?php if(in_array(($key), explode(',',""))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
+                <option value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['type'])?$row['type']:explode(',',$row['type']))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
         </div>
@@ -67,7 +67,7 @@
         <div class="col-xs-12 col-sm-8">
             <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[page]">
                 <?php if(is_array($pageList) || $pageList instanceof \think\Collection || $pageList instanceof \think\Paginator): if( count($pageList)==0 ) : echo "" ;else: foreach($pageList as $key=>$vo): ?>
-                <option value="<?php echo $key; ?>" <?php if(in_array(($key), explode(',',""))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
+                <option value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['page'])?$row['page']:explode(',',$row['page']))): ?>selected<?php endif; ?>><?php echo $vo; ?></option>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </select>
         </div>
@@ -76,7 +76,7 @@
         <label for="c-images" class="control-label col-xs-12 col-sm-2"><?php echo __('Images'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
-                <input id="c-images" class="form-control" size="50" name="row[images]" type="text">
+                <input id="c-images" class="form-control" size="50" value="<?php echo $row['images']; ?>" name="row[images]" type="text">
                 <div class="input-group-addon no-border no-padding">
                     <span><button type="button" id="plupload-images" class="btn btn-danger plupload" data-input-id="c-images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-images"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
                     <span><button type="button" id="fachoose-images" class="btn btn-primary fachoose" data-input-id="c-images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
@@ -89,13 +89,13 @@
     <div class="form-group">
         <label for="c-content" class="control-label col-xs-12 col-sm-2"><?php echo __('Content'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <textarea id="c-content" class="form-control summernote" rows="5" name="row[content]" cols="50" data-tip="详情页和url外链只能填写其中一个"></textarea>
+            <textarea id="c-content" class="form-control summernote" rows="5" name="row[content]" cols="50"><?php echo $row['content']; ?></textarea>
         </div>
     </div>
     <div class="form-group">
         <label for="c-url" class="control-label col-xs-12 col-sm-2"><?php echo __('Url'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-url" class="form-control" name="row[url]" type="text" data-tip="详情页和url链接只能填写其中一个">
+            <input id="c-url" class="form-control" name="row[url]" type="text" value="<?php echo $row['url']; ?>" data-tip="详情页和url链接只能填写其中一个">
         </div>
     </div>
     <div class="form-group layer-footer">
