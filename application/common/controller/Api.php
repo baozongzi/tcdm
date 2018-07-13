@@ -382,6 +382,10 @@ class Api extends Controller
         $userid = $row->userid;//当前登录的用户
         $vid = $row->vid;//当前视频id
         $status = $row->status;
+        $collect = Db::table('fa_collection')->where('userid = '.$userid." AND vid = ".$vid." AND tables = '".$table."'")->find();
+        if($collect){
+            return 0;
+        }
         if($status == "0"){
             $res = Db::table('fa_collection')->where('userid = '.$userid." AND vid = ".$vid." AND tables = '".$table."'")->delete();
             $data = array();

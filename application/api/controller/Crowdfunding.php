@@ -28,11 +28,6 @@ class Crowdfunding extends Api
         $this->catname = 'Story';
         $this->table = 'crowdfunding';
         $this->AuthRule = model('AuthRule');
-        $this->page   = input('page') ? input('page') : 1;
-        $this->offset = ($this->page - 1) * 2;
-        $this->limit  = $this->page * 2;
-        $this->website = model('Config')->where('name', 'website')->value('value');
-
         // 验证token
         $token = cookie('access_token');
         $this->row = input('row');
@@ -41,6 +36,11 @@ class Crowdfunding extends Api
         $this->userid = $this->row->userid;
         $this->cid = $this->row->cid;
         $this->rule($token,$this->userid);
+        $this->page   = $this->row->page ? $this->row->page : 1;
+        $this->offset = ($this->page - 1) * 2;
+        $this->limit  = $this->page * 2;
+        $this->website = model('Config')->where('name', 'website')->value('value');
+
     }
     // 列表页
     public function index(){
@@ -136,6 +136,22 @@ class Crowdfunding extends Api
         if($res){
             $status = '1';
             $mes = '评论成功😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
+        }
+    }
+
+    // 收藏
+    public function collectioned(){
+        $data = $this->collectionsed($this->row,$this->table,$this->model);
+        if($data == 0){
+            $status = '0';
+            $mes = '已收藏过了😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
+        }else{
+            $status = '1';
+            $mes = '成功😏';
             $res = $this->json_echo($status,$mes,$data);
             return $res;
         }

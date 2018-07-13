@@ -46,23 +46,27 @@ class Index extends Api
     public function index(){
         // $result = $this->model->field('id,name,inputtime,thumb')->select();
         //成语故事
-        $story = Db::table('fa_story')->where('status = 1 AND is_index = 1')->field('id,title,thumb')->order('updatetime desc,id desc')->limit(3)->select();
+        $story = $this->init_thumbs(Db::table('fa_story')->where('status = 1 AND is_index = 1')->field('id,title,thumb,view')->order('updatetime desc,id desc')->limit(5)->select());
         //健康养生
-        $health1 = Db::table('fa_health_interview')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(1)->find();
-        $health2 = Db::table('fa_health_story')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(1)->find();
+        $health1 = $this->init_thumbs(Db::table('fa_health_interview')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(1)->find());
+        $health2 = $this->init_thumbs(Db::table('fa_health_story')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(1)->find());
         $health = array($health1,$health2);
         //城市文化
-        $city = Db::table('fa_city')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select();
+        $city = $this->init_thumbs(Db::table('fa_city')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select());
         //最新综艺
-        $variety = Db::table('fa_variety')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select();
+        $variety = $this->init_thumbs(Db::table('fa_variety')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select());
         //艺人包装
-        $match = Db::table('fa_match')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select();
+        $match = $this->init_thumbs(Db::table('fa_match')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select());
 
         $result['story'] = $story;
         $result['health'] = $health;
         $result['city'] = $city;
         $result['variety'] = $variety;
-        return api_json('0', 'OK', $result);
+        $result['match'] = $match;
+        $status = '1';
+        $mes = '获取成功😏';
+        $res = $this->json_echo($status,$mes,$result);
+        return $res;
     }
 
     

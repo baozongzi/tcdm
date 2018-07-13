@@ -28,11 +28,6 @@ class Variety extends Api
         $this->catname = 'Variety';
         $this->table = 'variety';
         $this->AuthRule = model('AuthRule');
-        $this->page   = input('page') ? input('page') : 1;
-        $this->offset = ($this->page - 1) * 10;
-        $this->limit  = $this->page * 10;
-        $this->website = model('Config')->where('name', 'website')->value('value');
-
         // 验证token
         $token = cookie('access_token');
         $this->row = input('row');
@@ -41,6 +36,11 @@ class Variety extends Api
         $this->userid = $this->row->userid;
         $this->cid = $this->row->cid;
         $this->rule($token,$this->userid);
+        $this->page   = $this->row->page ? $this->row->page : 1;
+        $this->offset = ($this->page - 1) * 10;
+        $this->limit  = $this->page * 10;
+        $this->website = model('Config')->where('name', 'website')->value('value');
+
     }
     // 列表页
     public function index(){
@@ -73,7 +73,10 @@ class Variety extends Api
         $res['is_collected'] = $this->collection($userid,$id,$model['tables']);
         // 评论
         $comment = $this->comment($userid,$id,$model['tables'],$this->offset, $this->limit);
-
+        // 点击量更新
+        $data['view'] = $data['view'] + 1;
+        $update['view'] = $data['view'];
+        $this->model->where('id = '.$id)->update($update);
         $res['comment'] = $comment;
         if($res){
             $status = '1';
@@ -105,6 +108,22 @@ class Variety extends Api
         if($res){
             $status = '1';
             $mes = '评论成功😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
+        }
+    }
+
+    // 收藏
+    public function collectioned(){
+        $data = $this->collectionsed($this->row,$this->table,$this->model);
+        if($data == 0){
+            $status = '0';
+            $mes = '已收藏过了😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
+        }else{
+            $status = '1';
+            $mes = '成功😏';
             $res = $this->json_echo($status,$mes,$data);
             return $res;
         }
