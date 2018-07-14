@@ -251,9 +251,9 @@ class Api extends Controller
     public function create_token($data){
         $arr = array(
                 'mobile'    =>  $data['mobile'],
-                // 'password'      =>  $data['password'],
+                'password'      =>  $data['password'],
                 'unique'    =>  $data['unique'],
-                // 'time'      =>  date("Y-m-d H",time())
+                'time'      =>  date("Y-m-d H",time())
             );
         $base64 = base64_encode(json_encode($arr));
         $hmac = hash_hmac('sha256', $base64, Api_Key, $as_binary=false);
@@ -378,7 +378,7 @@ class Api extends Controller
         return $is_collected;
     }
     // 收藏接口
-    public function collectionsed($row,$table,$model){
+    public function collectionsed($row,$table,$model,$models){
         $userid = $row->userid;//当前登录的用户
         $vid = $row->vid;//当前视频id
         $status = $row->status;
@@ -394,8 +394,8 @@ class Api extends Controller
             $user = Db::table('fa_user')->where("id = ".$userid)->field('nickname,head')->find();
             $data['inputtime'] = strtotime(date("Y-m-d",time())." ".date('H').":0:0");
             $data['vid'] = $vid;
-            $data['cid'] = $row->cid;;
-            $data['status'] = $status;
+            $data['cid'] = $row->cid;
+            $data['model'] = $models;
             $data['userid'] = $userid;
             $data['tables'] = $this->table;
             $res = Db::table('fa_collection')->insert($data);
