@@ -377,7 +377,7 @@ class Api extends Controller
         }
         return $is_collected;
     }
-    // 收藏接口
+    // 收藏接口 
     public function collectionsed($row,$table,$model,$models){
         $userid = $row->userid;//当前登录的用户
         $vid = $row->vid;//当前视频id
