@@ -115,7 +115,7 @@ class Variety extends Api
 
     // 收藏
     public function collectioned(){
-        $data = $this->collectionsed($this->row,$this->table,$this->model);
+        $data = $this->collectionsed($this->row,$this->table,$this->model,$models = 'variety');
         if($data == 0){
             $status = '0';
             $mes = '已收藏过了😏';

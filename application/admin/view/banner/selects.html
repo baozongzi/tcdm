@@ -6,7 +6,7 @@
             <select  id="selects" class="form-control">
                 <option  value="">无</option>
                 {volist name="ruledata"  id="vo"}
-                    <option data="{$vo.title}" {if $vo.title == $row.catname}selected{/if}  value="{$vo.table}">{$vo.sign}{$vo.title}</option>
+                    <option data="{$vo.title}" {if $vo.title == $row.catname}selected{/if} model="{$vo.model}" cid="{$vo.cid}" value="{$vo.table}">{$vo.sign}{$vo.title}</option>
                 {/volist}
             </select>
         </div>
@@ -78,18 +78,20 @@ $(function(){
         $('.removes').remove();
         var table = $("#selects").val();
         var table_name = $("#selects option:selected").attr("data");
+        var cid = $("#selects option:selected").attr("cid");
+        var model = $("#selects option:selected").attr("model");
         $.ajax({
             url:"/admin/banner/search_catname",
             type:'post',
             // data:{'name名':val值}
-            data:{'table':table,'table_name':table_name},
+            data:{'table':table,'table_name':table_name,'cid':cid,'model':model},
             dataType:'json',
             success:function(data){
               if(data){
                 var len = data.length;
                 var catname_tab = $('.catname_tab');
                 for(var i = 0; i < len; i++){
-                    catname_tab.append('<tr class="removes" data-index="0"> <td> <input type="checkbox" name="checkbox[]" value="'+data[i].id+'"  >  <input type="hidden" value="'+data[i].id+'"  name="ids[]" class="ids_'+data[i].id+'"/>  <input type="hidden" value="'+table+'"   class="tab_'+data[i].id+'"/> </td> <td >'+data[i].id+'</td> <td class="title_'+data[i].id+'">'+data[i].title+'</td>   <td class="catname_'+data[i].id+'">'+data[i].catname+'</td> </tr>');
+                    catname_tab.append('<tr class="removes" data-index="0"> <td> <input type="radio" name="radio[]" value="'+data[i].id+'"  >  <input type="hidden" value="'+data[i].id+'"  name="ids[]" class="ids_'+data[i].id+'"/> <input type="hidden" name="cid" value="'+data[i].cid+'"  class="cid_'+data[i].id+'"/> <input type="hidden" name="model" value="'+data[i].model+'"  class="model_'+data[i].id+'"/> <input type="hidden" value="'+table+'"   class="tab_'+data[i].id+'"/> </td> <td >'+data[i].id+'</td> <td class="title_'+data[i].id+'">'+data[i].title+'</td>   <td class="catname_'+data[i].id+'">'+data[i].catname+'</td> </tr>');
                 }
               }else{
                 alert('数据读取失败');
@@ -110,7 +112,7 @@ function close_catname(){
 function sure_catname(){
     // $('.remove_artist').remove();
     var chk_values =[];    
-    $('input[name="checkbox[]"]:checked').each(function(){    
+    $('input[name="radio[]"]:checked').each(function(){    
         chk_values.push($(this).val());    
     });
     if(chk_values.length == 0){
@@ -127,7 +129,9 @@ function sure_catname(){
             table = $(".tab_"+str[i]+"").val();
             title = $(".title_"+str[i]+"").text();
             catname = $(".catname_"+str[i]+"").text();
-            var html = '<tr class="removes" data-index="0"><td><input type="hidden" value="'+ids+'" name="row[vid]" class="ids_'+ids+'"/> '+ids+' <input type="hidden" value="'+catname+'" name="row[catname]" class="tab_n_'+ids+'"/> <input type="hidden" value="'+title+'" name="row[title]" class="tab_n_'+ids+'"/> </td>  <td class="title_'+ids+'">'+title+'</td> <td >'+catname+'<input value="'+table+'" name="row[table]" type="hidden"></td></tr>'
+            cid = $(".cid_"+str[i]+"").val();
+            model = $(".model_"+str[i]+"").val();
+            var html = '<tr class="removes" data-index="0"><td><input type="hidden" value="'+ids+'" name="row[vid]" class="ids_'+ids+'"/> '+ids+' <input type="hidden" value="'+catname+'" name="row[catname]" class="tab_n_'+ids+'"/> <input type="hidden" value="'+title+'" name="row[title]" class="tab_n_'+ids+'"/> <input type="hidden" value="'+cid+'" name="row[cid]" class="tab_n_'+ids+'"/> <input type="hidden" value="'+model+'" name="row[model]" class="tab_n_'+ids+'"/> </td>  <td class="title_'+ids+'">'+title+'</td> <td >'+catname+'<input value="'+table+'" name="row[table]" type="hidden"></td></tr>'
             $(".show_video").append(html);
             $('.catname').hide();
             $('.subms').removeClass('disabled');

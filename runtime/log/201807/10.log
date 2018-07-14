@@ -1,0 +1,1766 @@
+---------------------------------------------------------------
+[ 2018-07-10T13:08:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety?ref=addtabs
+[ info ] fire.cc/admin/variety?ref=addtabs [运行时间：0.079524s][吞吐率：12.57req/s] [内存消耗：1,849.45kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002054s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003845s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001098s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000565s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T13:08:12+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs
+[ info ] fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs [运行时间：0.050801s][吞吐率：19.68req/s] [内存消耗：2,129.10kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002050s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/variety?ref=addtabs',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000470s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\phpStudy\WWW\fire\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000447s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T13:08:12+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=index&v=1531199292
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=index&v=1531199292 [运行时间：0.045573s][吞吐率：21.94req/s] [内存消耗：2,139.28kb] [文件加载：77]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001912s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1531199292',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000419s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000449s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T13:08:13+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs
+[ info ] fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs [运行时间：0.110405s][吞吐率：9.06req/s] [内存消耗：2,783.92kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002057s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fire.cc',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '74',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/variety?ref=addtabs',
+  '__token__' => 'e54209a039d36f7e8a2113268bd94a7a',
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000481s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\phpStudy\WWW\fire\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.019538s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003568s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.020680s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.001925s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1531199293,`token`='298cfb48-ba05-4bd3-99f4-7cdd5840813f',`updatetime`=1531199293  WHERE  `id` = 1 [ RunTime:0.002091s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.015647s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\\/variety?ref=addtabs\",\"__token__\":\"e54209a039d36f7e8a2113268bd94a7a\",\"username\":\"admin\"}' , '/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36' , '127.0.0.1' , 1531199293) [ RunTime:0.002450s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:08:13+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety?ref=addtabs
+[ info ] fire.cc/admin/variety?ref=addtabs [运行时间：0.096053s][吞吐率：10.41req/s] [内存消耗：2,899.72kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001945s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000493s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000472s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002549s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.011066s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.010786s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.012934s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001207s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:08:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index
+[ info ] fire.cc/admin/index/index [运行时间：1.166695s][吞吐率：0.86req/s] [内存消耗：3,241.70kb] [文件加载：97]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001946s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000457s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\fire\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000485s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011363s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009293s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000684s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009284s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001135s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:08:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=index&v=1531199293
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=index&v=1531199293 [运行时间：0.044214s][吞吐率：22.62req/s] [内存消耗：2,173.41kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001913s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1531199293',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000424s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000466s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T13:08:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/dashboard?addtabs=1
+[ info ] fire.cc/admin/dashboard?addtabs=1 [运行时间：0.182704s][吞吐率：5.47req/s] [内存消耗：3,209.44kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001905s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000580s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\phpStudy\WWW\fire\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'questionstotal',
+  7 => 'pdftotal',
+  8 => 'activetotal',
+  9 => 'paylist',
+  10 => 'createlist',
+  11 => 'uploadmode',
+  12 => 'categorycount',
+  13 => 'attachmentcount',
+  14 => 'questionTrue',
+  15 => 'questionFalse',
+  16 => 'activetotalUser',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000453s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002233s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009336s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000639s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009106s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001165s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.012324s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` LIMIT 1 [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.012035s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` LIMIT 1 [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_attachment` [ RunTime:0.011793s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_attachment` LIMIT 1 [ RunTime:0.001680s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_questions` [ RunTime:0.011168s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_questions` LIMIT 1 [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_pdfilelist` [ RunTime:0.010886s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_pdfilelist` LIMIT 1 [ RunTime:0.000738s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_activity` [ RunTime:0.010903s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_activity` LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_activity_user` [ RunTime:0.010159s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_activity_user` LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_questions` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_questions` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000404s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:08:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety?addtabs=1
+[ info ] fire.cc/admin/variety?addtabs=1 [运行时间：0.087269s][吞吐率：11.46req/s] [内存消耗：2,916.91kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002081s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000471s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Variety->index[ D:\phpStudy\WWW\fire\application\admin\controller\Variety.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\variety\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000485s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002656s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009902s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009378s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001129s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'variety' LIMIT 1 [ RunTime:0.000487s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:08:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=dashboard&v=1531199294
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=dashboard&v=1531199294 [运行时间：0.047963s][吞吐率：20.85req/s] [内存消耗：2,172.88kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001905s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1531199294',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000470s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000445s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T13:08:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=variety&v=1531199295
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=variety&v=1531199295 [运行时间：0.073553s][吞吐率：13.60req/s] [内存消耗：2,169.04kb] [文件加载：77]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005236s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'variety',
+  'v' => '1531199295',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000976s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000719s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T13:08:15+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety/index/?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1531199295304
+[ info ] fire.cc/admin/variety/index/?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1531199295304 [运行时间：0.096443s][吞吐率：10.37req/s] [内存消耗：2,930.05kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002217s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=7agec66ph0ag1fr1ssckj6mtb4',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1531199295304',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000506s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Variety->index[ D:\phpStudy\WWW\fire\application\admin\controller\Variety.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000458s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002554s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.008873s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000481s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009566s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_variety` [ RunTime:0.011418s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_variety` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_variety` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 0,10 [ RunTime:0.000470s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:21:36+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.154787s][吞吐率：6.46req/s] [内存消耗：2,636.12kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002319s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------794996416203538370751384',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '11c2b9fd-d44d-4b3c-898a-b05672a13774',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000539s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->collectioned[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002588s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.011132s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000391s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000467s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.009061s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000383s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_story` [ RunTime:0.010648s ]
+[ sql ] [ SQL ] SELECT `title` FROM `fa_story` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT `nickname`,`head` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.016803s ]
+[ sql ] [ SQL ] INSERT INTO `fa_collection` (`title` , `inputtime` , `vid` , `cid` , `status` , `userid` , `tables`) VALUES ('悬梁刺股' , 1531198800 , 1 , 1 , 1 , 69 , 'story') [ RunTime:0.044456s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:22:04+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/show
+[ info ] fire.cc/api/story/show [运行时间：0.147232s][吞吐率：6.79req/s] [内存消耗：2,658.27kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001916s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------556091950122850349232351',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '60eec58f-9ac6-4258-beaf-96ec171a1198',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000427s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->show[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010841s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.009533s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000402s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.008920s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_story` [ RunTime:0.008650s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_story` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.008295s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_auth_rule` WHERE  (  tables = 'story' ) LIMIT 1 [ RunTime:0.000479s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user_vip` [ RunTime:0.009632s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_vip` WHERE  (  userid = 69 AND createtime <='1531152000' AND endtime >= '1531152000' ) LIMIT 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_user_vip` WHERE  (  userid = 69 AND createtime <='1531152000' AND endtime >= '1531152000' ) LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT `id`,`head`,`normal_name`,`diamond` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000302s ]
+[ sql ] [ SQL ] SELECT `id`,`head`,`normal_name`,`diamond` FROM `fa_user` WHERE  (  id = 25 ) LIMIT 1 [ RunTime:0.000293s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_history` [ RunTime:0.009693s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_history` WHERE  (  userid = 69 AND vid = 1 AND tables = 'story' ) LIMIT 1 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.008783s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_collection` WHERE  (  userid = 69 AND vid = 1 AND tables = 'story' ) LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_story_comment` [ RunTime:0.009367s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_story_comment` WHERE  (  vid = 1 ) LIMIT 1 [ RunTime:0.000333s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_story_comment` WHERE  (  vid = 1 ) ORDER BY inputtime desc LIMIT 0,2 [ RunTime:0.000306s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:28:34+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.105163s][吞吐率：9.51req/s] [内存消耗：2,636.12kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002312s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------103983291383792373967998',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'd77f7a06-41a4-42da-8820-ccabedf3e241',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000593s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->collectioned[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002479s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.009760s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000416s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.009062s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_story` [ RunTime:0.009624s ]
+[ sql ] [ SQL ] SELECT `title` FROM `fa_story` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SELECT `nickname`,`head` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.008959s ]
+[ sql ] [ SQL ] INSERT INTO `fa_collection` (`title` , `inputtime` , `vid` , `cid` , `status` , `userid` , `tables`) VALUES ('悬梁刺股' , 1531198800 , 1 , 1 , 1 , 69 , 'story') [ RunTime:0.001260s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:30:15+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.090581s][吞吐率：11.04req/s] [内存消耗：2,665.72kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001919s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------462852290948076193820088',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '2ea21253-1cdb-4a79-91c1-19af3168b2d9',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000416s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->collectioned[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002584s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.009805s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000363s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.009103s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.008879s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_collection` WHERE  (  userid = 69 AND vid = 1 AND tables = 'story' ) LIMIT 1 [ RunTime:0.000509s ]
+[ error ] [8]未定义变量: data[D:\phpStudy\WWW\fire\application\common\controller\Api.php:388]
+---------------------------------------------------------------
+[ 2018-07-10T13:30:56+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.098264s][吞吐率：10.18req/s] [内存消耗：2,629.54kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000057s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002821s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------551140797387398408360802',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'e882db5f-179c-4042-9836-6fa0ac1044d5',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000637s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->collectioned[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002605s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.010588s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.009862s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.008964s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_collection` WHERE  (  userid = 69 AND vid = 1 AND tables = 'story' ) LIMIT 1 [ RunTime:0.000466s ]
+---------------------------------------------------------------
+[ 2018-07-10T13:33:28+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.041550s][吞吐率：24.07req/s] [内存消耗：1,386.42kb] [文件加载：62]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002234s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------399130289020087564860852',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => 'a6707cec-004d-4476-b5a3-6739210d40ed',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000557s ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected ')'[D:\phpStudy\WWW\fire\application\api\controller\Story.php:128]
+---------------------------------------------------------------
+[ 2018-07-10T13:33:48+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.097706s][吞吐率：10.23req/s] [内存消耗：2,629.58kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002921s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------715390736379121987840916',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '65efd836-0a96-4a4a-9bbf-3404796bd794',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000541s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->collectioned[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010664s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.009830s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.009517s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.009028s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_collection` WHERE  (  userid = 69 AND vid = 1 AND tables = 'story' ) LIMIT 1 [ RunTime:0.000520s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:01:17+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.113916s][吞吐率：8.78req/s] [内存消耗：2,638.25kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003629s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------762923471196568594660392',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '9c2bfcd0-a221-4cd1-bde2-a05fa73f4943',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000652s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->collectioned[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002645s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.010504s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000448s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.010381s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.009186s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_collection` WHERE  (  userid = 69 AND vid = 1 AND tables = 'story' ) LIMIT 1 [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_story` [ RunTime:0.009913s ]
+[ sql ] [ SQL ] SELECT `title` FROM `fa_story` WHERE  (  id = 1 ) LIMIT 1 [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT `nickname`,`head` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] INSERT INTO `fa_collection` (`title` , `inputtime` , `vid` , `cid` , `status` , `userid` , `tables`) VALUES ('悬梁刺股' , 1531202400 , 1 , 1 , 1 , 69 , 'story') [ RunTime:0.001166s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:18:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety?ref=addtabs
+[ info ] fire.cc/admin/variety?ref=addtabs [运行时间：0.049216s][吞吐率：20.32req/s] [内存消耗：1,849.23kb] [文件加载：75]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002509s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000577s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000471s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T14:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs
+[ info ] fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs [运行时间：0.047653s][吞吐率：20.99req/s] [内存消耗：2,129.10kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001947s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/variety?ref=addtabs',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000518s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\phpStudy\WWW\fire\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\index\login.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'background',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000575s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T14:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=index&v=1531203532
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=index&v=1531203532 [运行时间：0.046193s][吞吐率：21.65req/s] [内存消耗：2,139.28kb] [文件加载：77]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000113s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001980s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1531203532',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000550s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000683s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T14:18:53+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs
+[ info ] fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs [运行时间：0.085808s][吞吐率：11.65req/s] [内存消耗：2,783.92kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001927s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://fire.cc',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '74',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+)
+[ info ] [ PARAM ] array (
+  'url' => '/admin/variety?ref=addtabs',
+  '__token__' => '5f1ff2e2b3d343e0b85f15226850af47',
+  'username' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000554s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ D:\phpStudy\WWW\fire\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.011649s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002688s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin` [ RunTime:0.009740s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000809s ]
+[ sql ] [ SQL ] UPDATE `fa_admin`  SET `logintime`=1531203533,`token`='8d063454-417f-49e9-8b69-e2adc58b052f',`updatetime`=1531203533  WHERE  `id` = 1 [ RunTime:0.001558s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_admin_log` [ RunTime:0.008884s ]
+[ sql ] [ SQL ] INSERT INTO `fa_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"url\":\"\\/admin\\/variety?ref=addtabs\",\"__token__\":\"5f1ff2e2b3d343e0b85f15226850af47\",\"username\":\"admin\"}' , '/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36' , '127.0.0.1' , 1531203533) [ RunTime:0.001418s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:18:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety?ref=addtabs
+[ info ] fire.cc/admin/variety?ref=addtabs [运行时间：0.087176s][吞吐率：11.47req/s] [内存消耗：2,899.72kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002616s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000565s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000625s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010876s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009372s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000894s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009351s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001346s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:18:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index
+[ info ] fire.cc/admin/index/index [运行时间：1.186111s][吞吐率：0.84req/s] [内存消耗：3,241.70kb] [文件加载：97]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002098s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/login?url=%2Fadmin%2Fvariety%3Fref%3Daddtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000486s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\fire\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000503s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010859s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009553s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000506s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.009456s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001239s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:18:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=index&v=1531203533
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=index&v=1531203533 [运行时间：0.045319s][吞吐率：22.07req/s] [内存消耗：2,173.41kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001876s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1531203533',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000545s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000454s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T14:18:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/dashboard?addtabs=1
+[ info ] fire.cc/admin/dashboard?addtabs=1 [运行时间：0.173439s][吞吐率：5.77req/s] [内存消耗：3,209.44kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002163s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/dashboard?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000593s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\phpStudy\WWW\fire\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'questionstotal',
+  7 => 'pdftotal',
+  8 => 'activetotal',
+  9 => 'paylist',
+  10 => 'createlist',
+  11 => 'uploadmode',
+  12 => 'categorycount',
+  13 => 'attachmentcount',
+  14 => 'questionTrue',
+  15 => 'questionFalse',
+  16 => 'activetotalUser',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000467s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002462s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.008775s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000492s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.010564s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001232s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.010506s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_user` LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_category` [ RunTime:0.009927s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_category` LIMIT 1 [ RunTime:0.000485s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_attachment` [ RunTime:0.009639s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_attachment` LIMIT 1 [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_questions` [ RunTime:0.010010s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_questions` LIMIT 1 [ RunTime:0.000280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_pdfilelist` [ RunTime:0.009961s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_pdfilelist` LIMIT 1 [ RunTime:0.000877s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_activity` [ RunTime:0.009751s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_activity` LIMIT 1 [ RunTime:0.000384s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_activity_user` [ RunTime:0.009972s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_activity_user` LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_questions` WHERE  `status` = 1 LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_questions` WHERE  `status` = 0 LIMIT 1 [ RunTime:0.000284s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000502s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:18:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety?addtabs=1
+[ info ] fire.cc/admin/variety?addtabs=1 [运行时间：0.090602s][吞吐率：11.04req/s] [内存消耗：2,916.91kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002508s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000541s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Variety->index[ D:\phpStudy\WWW\fire\application\admin\controller\Variety.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\fire\public/../application/admin\view\variety\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000467s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004021s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.009306s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.010072s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001236s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fa_auth_rule` WHERE  `name` = 'variety' LIMIT 1 [ RunTime:0.000474s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:18:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=dashboard&v=1531203534
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=dashboard&v=1531203534 [运行时间：0.057771s][吞吐率：17.31req/s] [内存消耗：2,172.88kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001901s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1531203534',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000642s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000611s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T14:18:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/ajax/lang?callback=define&controllername=variety&v=1531203535
+[ info ] fire.cc/admin/ajax/lang?callback=define&controllername=variety&v=1531203535 [运行时间：0.045445s][吞吐率：22.00req/s] [内存消耗：2,169.04kb] [文件加载：77]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001961s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'variety',
+  'v' => '1531203535',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000531s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\phpStudy\WWW\fire\application\admin\controller\Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000446s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-10T14:19:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/variety/index/?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1531203535260
+[ info ] fire.cc/admin/variety/index/?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1531203535260 [运行时间：0.093270s][吞吐率：10.72req/s] [内存消耗：2,930.05kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002006s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'variety',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=hv9un8ggr6j2n01fuo93u3m602',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://fire.cc/admin/variety?addtabs=1',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'keep-alive',
+  'host' => 'fire.cc',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1531203535260',
+)
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000527s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Variety->index[ D:\phpStudy\WWW\fire\application\admin\controller\Variety.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000473s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007866s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_group_access` [ RunTime:0.008716s ]
+[ sql ] [ SQL ] SELECT `AuthGroupAccess`.`uid`,`AuthGroupAccess`.`group_id`,`AuthGroup`.`id`,`AuthGroup`.`pid`,`AuthGroup`.`name`,`AuthGroup`.`rules` FROM `fa_auth_group_access` `AuthGroupAccess` LEFT JOIN `fa_auth_group` `AuthGroup` ON `AuthGroupAccess`.`group_id`=`AuthGroup`.`id` WHERE  (  AuthGroupAccess.uid='1' and AuthGroup.status='normal' ) [ RunTime:0.000560s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_auth_rule` [ RunTime:0.008792s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fa_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.001134s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_variety` [ RunTime:0.009121s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `fa_variety` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_variety` WHERE  `status` = 1 ORDER BY `id`  desc LIMIT 0,10 [ RunTime:0.000523s ]
+---------------------------------------------------------------
+[ 2018-07-10T14:23:51+08:00 ] 127.0.0.1 127.0.0.1 POST /api/story/collectioned
+[ info ] fire.cc/api/story/collectioned [运行时间：0.100418s][吞吐率：9.96req/s] [内存消耗：2,629.58kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002500s ]
+[ info ] [ LANG ] D:\phpStudy\WWW\fire\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'story',
+    2 => 'collectioned',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'content-length' => '222',
+  'content-type' => 'multipart/form-data; boundary=--------------------------631805843684683068575108',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'fire.cc',
+  'accept' => '*/*',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'postman-token' => '4c8d57d5-47f8-4e60-a80e-b56f2d28dd26',
+  'cache-control' => 'no-cache',
+  'cookie' => 'access_token=28e67a6108c2fc863c9f996144d26ba7ccc3b8dc47c94a5d2d324bf831bd1105; PHPSESSID=3ts79ev326rakk6jvnbf05veo3',
+)
+[ info ] [ PARAM ] array (
+  'row' => 'eyJ1c2VyaWQiOiI2OSIsImNpZCI6IjEiLCJ2aWQiOiIxIiwic3RhdHVzIjoiMSJ9',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000542s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\api\controller\Story->collectioned[ D:\phpStudy\WWW\fire\application\api\controller\Story.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010810s ] mysql:host=127.0.0.1;dbname=zgys;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_config` [ RunTime:0.010278s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT `value` FROM `fa_config` WHERE  `name` = 'website' LIMIT 1 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_user` [ RunTime:0.009137s ]
+[ sql ] [ SQL ] SELECT `access_token` FROM `fa_user` WHERE  (  id = 69 ) LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_collection` [ RunTime:0.009187s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_collection` WHERE  (  userid = 69 AND vid = 1 AND tables = 'story' ) LIMIT 1 [ RunTime:0.000556s ]

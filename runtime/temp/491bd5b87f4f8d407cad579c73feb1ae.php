@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:75:"D:\phpStudy\WWW\fire\public/../application/admin\view\auth\group\index.html";i:1515575204;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:71:"D:\phpStudy\WWW\fire\public/../application/admin\view\banner\index.html";i:1528781624;s:73:"D:\phpStudy\WWW\fire\public/../application/admin\view\layout\default.html";i:1515575204;s:70:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\meta.html";i:1527563835;s:72:"D:\phpStudy\WWW\fire\public/../application/admin\view\common\script.html";i:1527563882;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -58,11 +58,12 @@
             <div class="tab-pane fade active in" id="one">
                 <div class="widget-body no-padding">
                     <div id="toolbar" class="toolbar">
-                        <?php echo build_toolbar('refresh,add,delete'); ?>
+                        <?php echo build_toolbar('refresh,add,edit,del,import'); ?>
                     </div>
-                    <table id="table" class="table table-striped table-bordered table-hover" 
-                           data-operate-edit="<?php echo $auth->check('auth/group/edit'); ?>" 
-                           data-operate-del="<?php echo $auth->check('auth/group/del'); ?>" 
+                    <input type="hidden" value="<?php echo input('cid');?>" id="cid">
+                    <table id="table" class="table table-striped table-bordered table-hover"
+                           data-operate-edit="<?php echo $auth->check('health/edit'); ?>"
+                           data-operate-del="<?php echo $auth->check('health/del'); ?>"
                            width="100%">
                     </table>
                 </div>
@@ -71,7 +72,19 @@
         </div>
     </div>
 </div>
-
+<script id="categorytpl" type="text/html">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-inline" data-toggle="cxselect" data-selects="one,two,tree,four,five">
+                <select class="one form-control" name="category1" data-url="ajax/category?pid=0"></select>
+                <select class="two form-control" name="category2" data-url="ajax/category" data-query-name="pid"></select>
+                <select class="tree form-control" name="category3" data-url="ajax/category" data-query-name="pid"></select>
+                <select class="four form-control" name="category4" data-url="ajax/category" data-query-name="pid"></select>
+                <select class="five form-control" name="category5" data-url="ajax/category" data-query-name="pid"></select>
+            </div>
+        </div>
+    </div>
+</script>
                             </div>
                         </div>
                     </div>

@@ -19,6 +19,7 @@ class Test extends Controller
     {
         $arr = input();
         $base64 = base64_encode(json_encode($arr));
+        echo "<pre>";
         print_r($base64);
         die;
     }

@@ -32,7 +32,7 @@ class Health extends Api
         $this->row = json_decode($this->row);
         $this->userid = $this->row->userid;
         $this->cid = $this->row->cid;
-        $this->page   = $this->row->page ? $this->row->page : 1;
+        $this->page   = isset($this->row->page) ? $this->row->page : 1;
         $this->offset = ($this->page - 1) * 10;
         $this->limit  = $this->page * 10;
         $this->website = model('Config')->where('name', 'website')->value('value');
@@ -64,9 +64,12 @@ class Health extends Api
     }
     // 列表页
     public function index(){
-        $result = $this->model->field('id,title,inputtime,thumb,view')->where('status = 1 AND cid = '.$this->cid)->limit($this->offset, $this->limit)->select();
+        $banner = $this->init_thumbs(Db::table('fa_banner')->field('id,title,thumb,model,cid,url')->where("model = 'health' and cid = $this->cid")->order('inputtime desc')->limit(3)->select());
+        $health = $this->init_thumbs(Db::table("fa_".$this->table)->field('id,title,inputtime,thumb,view')->where('status = 1')->order('id desc')->limit($this->offset, $this->limit)->select());
+        
+        $result['banner'] = $banner;
+        $result['health'] = $health;
         // $res = $this->artist_show($result);
-        $result = $this->init_thumbs($result);
         $status = '1';
         $mes = '获取成功😏';
         $res = $this->json_echo($status,$mes,$result);
@@ -136,7 +139,7 @@ class Health extends Api
 
     // 收藏
     public function collectioned(){
-        $data = $this->collectionsed($this->row,$this->table,$this->model);
+        $data = $this->collectionsed($this->row,$this->table,$this->model,$models = 'health');
         if($data == 0){
             $status = '0';
             $mes = '已收藏过了😏';

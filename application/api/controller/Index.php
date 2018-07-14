@@ -45,19 +45,27 @@ class Index extends Api
 
     public function index(){
         // $result = $this->model->field('id,name,inputtime,thumb')->select();
+        // banner
+        $banner = $this->init_thumbs(Db::table('fa_banner')->where('is_index = 1')->field('id,title,thumb,model,cid,url')->order('updatetime desc,id desc')->limit(3)->select());
         //成语故事
         $story = $this->init_thumbs(Db::table('fa_story')->where('status = 1 AND is_index = 1')->field('id,title,thumb,view')->order('updatetime desc,id desc')->limit(5)->select());
         //健康养生
-        $health1 = $this->init_thumbs(Db::table('fa_health_interview')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(1)->find());
-        $health2 = $this->init_thumbs(Db::table('fa_health_story')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(1)->find());
-        $health = array($health1,$health2);
+        $health1 = Db::table('fa_health_interview')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime,description')->order('updatetime desc,id desc')->limit(1)->find();//养生访谈
+        $health1['comment'] = Db::table('fa_health_interview_comment')->where('vid = '.$health1['id'])->count();
+        $health2 = Db::table('fa_health_story')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime,description')->order('updatetime desc,id desc')->limit(1)->find();//养生故事
+        $health2['comment'] = Db::table('fa_health_story_comment')->where('vid = '.$health2['id'])->count();
+        $health = $this->init_thumbs(array($health1,$health2));
         //城市文化
-        $city = $this->init_thumbs(Db::table('fa_city')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select());
+        $city = $this->init_thumbs(Db::table('fa_city')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(4)->select());
         //最新综艺
-        $variety = $this->init_thumbs(Db::table('fa_variety')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select());
+        $variety = $this->init_thumbs(Db::table('fa_variety')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime,description')->order('updatetime desc,id desc')->limit(3)->select());
         //艺人包装
-        $match = $this->init_thumbs(Db::table('fa_match')->where('status = 1 AND is_index = 1')->field('id,title,thumb,inputtime')->order('updatetime desc,id desc')->limit(2)->select());
+        $match = $this->init_thumbs(Db::table('fa_match')->where('status = 1 AND is_index = 1')->field('id,title,thumb,starttime,endtime')->order('updatetime desc,id desc')->limit(2)->select());
+        foreach ($match as $m => $mv) {
+            $match[$m]['count'] = Db::table('fa_match_user')->where('match_id = '.$mv['id'])->count();
+        }
 
+        $result['banner'] = $banner;
         $result['story'] = $story;
         $result['health'] = $health;
         $result['city'] = $city;

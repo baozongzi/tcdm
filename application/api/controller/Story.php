@@ -35,7 +35,7 @@ class Story extends Api
         $this->row = json_decode($this->row);
         $userid = $this->row->userid;
         $this->rule($token,$userid);
-        $this->page   = $this->row->page ? $this->row->page : 1;
+        $this->page   = isset($this->row->page) ? $this->row->page : 1;
         $this->offset = ($this->page - 1) * 2;
         $this->limit  = $this->page * 2;
         $this->website = model('Config')->where('name', 'website')->value('value');
@@ -50,9 +50,11 @@ class Story extends Api
     }
     // 列表页
     public function index(){
-        $result = $this->model->field('id,title,inputtime,thumb,view')->where('status = 1')->order('id desc')->limit($this->offset, $this->limit)->select();
+        $banner = $this->init_thumbs(Db::table('fa_banner')->field('id,title,thumb,model,cid,url')->where("model = '$this->table'")->order('inputtime desc')->limit(3)->select());
+        $story = $this->init_thumbs(Db::table("fa_".$this->table)->field('id,title,inputtime,thumb,view')->where('status = 1')->order('id desc')->limit($this->offset, $this->limit)->select());
+        $result['banner'] = $banner;
+        $result['story'] = $story;
         
-        $result = $this->init_thumbs($result);
         $status = '1';
         $mes = '获取成功😏';
         $res = $this->json_echo($status,$mes,$result);
@@ -123,7 +125,7 @@ class Story extends Api
 
     // 收藏
     public function collectioned(){
-        $data = $this->collectionsed($this->row,$this->table,$this->model);
+        $data = $this->collectionsed($this->row,$this->table,$this->model,$models = 'story');
         if($data == 0){
             $status = '0';
             $mes = '已收藏过了😏';

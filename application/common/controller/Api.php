@@ -251,9 +251,9 @@ class Api extends Controller
     public function create_token($data){
         $arr = array(
                 'mobile'    =>  $data['mobile'],
-                'password'      =>  $data['password'],
+                // 'password'      =>  $data['password'],
                 'unique'    =>  $data['unique'],
-                'time'      =>  date("Y-m-d H",time())
+                // 'time'      =>  date("Y-m-d H",time())
             );
         $base64 = base64_encode(json_encode($arr));
         $hmac = hash_hmac('sha256', $base64, Api_Key, $as_binary=false);

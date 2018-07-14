@@ -46,13 +46,18 @@ class Banner extends Backend
             // $ruledata[$v['id']] = $v['title'];
             
             $ruledata[$k]['pid'] = $v['pid'];
+            $name = explode('/',$v['name']);
+            if(isset($name[3])){
+                $ruledata[$k]['cid'] = $name[3];
+            }else{
+                $ruledata[$k]['cid'] = '0';
+            }
             $ruledata[$k]['table'] = $v['tables'];
+            $ruledata[$k]['model'] = $name[0];
             $ruledata[$k]['title'] = $v['title'];
             $ruledata[$k]['sign'] = $v['sign'];
         }
-        // echo "<pre>";
-        // print_r($ruledata);
-        // die;
+
         $this->view->assign('ruledata', $ruledata);
     }
 
@@ -106,6 +111,9 @@ class Banner extends Backend
             if($params['is_link'] == '1'){
                 $params['title'] = $params['mytitle'];
             }
+            if($params['is_index'] == '1'){
+                $params['catname'] = '首页';
+            }
             unset($params['mytitle']);
             $params['inputtime'] = time();
             if ($params)
@@ -146,6 +154,9 @@ class Banner extends Backend
             $params = $this->request->post("row/a");
             if($params['is_link'] == '1'){
                 $params['title'] = $params['mytitle'];
+            }
+            if($params['is_index'] == '1'){
+                $params['catname'] = '首页';
             }
             unset($params['mytitle']);
             if ($params)
@@ -223,9 +234,12 @@ class Banner extends Backend
     public function search_catname(){
         $table = input('table');
         $table_name = input('table_name');
+        $cid = input('cid');
         $content = Db::table("fa_".$table)->where('status = 1')->field('id,title')->select();
         foreach ($content as $c => $value) {
             $content[$c]['catname'] = $table_name;
+            $content[$c]['cid'] = $cid;
+            $content[$c]['model'] = input('model');
         }
         exit(json_encode($content));
     }

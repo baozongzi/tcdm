@@ -36,7 +36,7 @@ class City extends Api
         $this->userid = $this->row->userid;
         $this->cid = $this->row->cid;
         $this->rule($token,$this->userid);
-        $this->page   = $this->row->page ? $this->row->page : 1;
+        $this->page   = isset($this->row->page) ? $this->row->page : 1;
         $this->offset = ($this->page - 1) * 10;
         $this->limit  = $this->page * 10;
         $this->website = model('Config')->where('name', 'website')->value('value');
@@ -114,7 +114,7 @@ class City extends Api
 
     // 收藏
     public function collectioned(){
-        $data = $this->collectionsed($this->row,$this->table,$this->model);
+        $data = $this->collectionsed($this->row,$this->table,$this->model,$models = 'city');
         if($data == 0){
             $status = '0';
             $mes = '已收藏过了😏';

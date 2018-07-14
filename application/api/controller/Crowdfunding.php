@@ -33,19 +33,33 @@ class Crowdfunding extends Api
         $this->row = input('row');
         $this->row = base64_decode($this->row);
         $this->row = json_decode($this->row);
-        $this->userid = $this->row->userid;
-        $this->cid = $this->row->cid;
-        $this->rule($token,$this->userid);
-        $this->page   = $this->row->page ? $this->row->page : 1;
+        $userid = $this->row->userid;
+        $this->rule($token,$userid);
+        $this->page   = isset($this->row->page) ? $this->row->page : 1;
         $this->offset = ($this->page - 1) * 2;
         $this->limit  = $this->page * 2;
         $this->website = model('Config')->where('name', 'website')->value('value');
 
+        // print_r($_SERVER);
+        // 加密操作
+        // $token = cookie('access_token');
+        // $row = input('row/a');
+        // $this->string = 'mcy-zgys';
+        // $this->row = input('row/a');
+        // $message = array(
+        //     'mobile'    => $this->row['mobile'],
+        //     'unique'    => $this->row['unique'],
+        // );
+        // $this->access_token = $this->create_token($message);
+        // $this->update = array(
+        //     'mobile'        => $this->row['mobile'],
+        //     'unique'    => $this->row['unique'],
+        //     'access_token'  => $this->access_token,
+        // );
     }
     // 列表页
     public function index(){
         $result = Db::table('fa_crowdfunding')->field('id,title,inputtime,thumb')->where('status = 1')->limit($this->offset, $this->limit)->select();
-
         //图片格式化
         $result = $this->init_thumbs($result);
         $status = '1';
@@ -58,9 +72,9 @@ class Crowdfunding extends Api
     // 查看详情
     public function show(){
         $id = $this->row->vid;//视频id
-        // $userid = $this->userid;//当前登录的用户
+        $userid = $this->row->userid;//当前登录的用户
         //数据详情
-        $data = $this->init_thumbs($this->model->where('id = '.$id)->find());
+        $data = $this->init_thumbs($this->model->where('id = '.$id)->field('id,title,total_money,success,person_num,successed,description,content,artist')->find());
         switch ($data['successed']){
             case '1':
                 $data['successed'] = '火热进行中^_^';
@@ -95,65 +109,25 @@ class Crowdfunding extends Api
             $mes = '获取成功😏';
             $res = $this->json_echo($status,$mes,$res);
             return $res;
-            // return api_json('1', 'OK', $res);
         }else{
-            $err['id'] = $data['id'];
-            $status = '1';
-            $mes = '获取成功😏';
-            $res = $this->json_echo($status,$mes,$err);
-            return $res;
-            // return api_json('0', 'ERROR', $err);
-        }
-    }
-
-    // 评论列表接口
-    public function comlists(){
-        $userid = $this->row->userid;//当前登录的用户
-        $vid = $this->row->vid;//当前登录的用户
-        $comments = Db::table('fa_crowdfunding_comment')->alias('fcc')->join('fa_user u','fcc.userid = u.id and fcc.vid = '.$vid.' AND fcc.userid = '.$userid)->field('userid,fcc.head,fcc.nickname,inputtime,fcc.content')->select();
-        foreach ($comments as $c => $com) {
-            $comments[$c]['head'] = $this->website.$comments[$c]['head'];
-        }
-        if($comments){
-            $status = '1';
-            $mes = '评论成功😏';
-            $res = $this->json_echo($status,$mes,$comments);
+            $status = '0';
+            $mes = '获取失败😏';
+            $res = $this->json_echo($status,$mes,array());
             return $res;
         }
     }
 
     // 评论接口
     public function comments(){
-        $userid = $this->row->userid;//当前登录的用户
-        $user = Db::table('fa_user')->where("id = ".$userid)->field('nickname,head')->find();
+        $data = input('');
+        $user = Db::table('fa_user')->where("id = ".$data['userid'])->field('nickname,head')->find();
         $data['inputtime'] = strtotime(date("Y-m-d",time())." ".date('H').":0:0");
         $data['nickname'] = $user['nickname'];
-        $data['head'] = $this->website.$user['head'];
-        $data['userid'] = $userid;
-        $data['vid'] = $this->row->vid;
-        $data['content'] = $this->row->content;
+        $data['head'] = $user['head'];
         $res = Db::table('fa_'.$this->table.'_comment')->insert($data);
         if($res){
-            $status = '1';
-            $mes = '评论成功😏';
-            $res = $this->json_echo($status,$mes,$data);
-            return $res;
-        }
-    }
-
-    // 收藏
-    public function collectioned(){
-        $data = $this->collectionsed($this->row,$this->table,$this->model);
-        if($data == 0){
-            $status = '0';
-            $mes = '已收藏过了😏';
-            $res = $this->json_echo($status,$mes,$data);
-            return $res;
-        }else{
-            $status = '1';
-            $mes = '成功😏';
-            $res = $this->json_echo($status,$mes,$data);
-            return $res;
+            $message = '评论成功';
+            $this->encode($data,$message);
         }
     }
 

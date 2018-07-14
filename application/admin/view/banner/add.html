@@ -15,6 +15,14 @@
         </div>
     </div>
     
+    <div class="form-group">
+        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('推荐首页')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <label for="row[is_index]-normal"><input class="is_index" name="row[is_index]" checked type="radio" value="1"> 是</label>
+            <label for="row[is_index]-normal"><input class="is_index" name="row[is_index]" type="radio" value="0"> 否</label>
+        </div>
+    </div>
+    
     <div class="form-group" id="prices" style="">
         <label for="url" class="control-label col-xs-12 col-sm-2">{:__('链接地址')}:</label>
         <div class="col-xs-12 col-sm-8">
@@ -39,14 +47,6 @@
 
     {include file="../application/admin/view/banner/selects.html" /}
     
-    
-    <div class="form-group">
-        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('推荐首页')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <label for="row[is_index]-normal"><input class="is_index" name="row[is_index]" checked type="radio" value="1"> 是</label>
-            <label for="row[is_index]-normal"><input class="is_index" name="row[is_index]" type="radio" value="0"> 否</label>
-        </div>
-    </div>
     
     <div class="form-group">
         <label for="c-description" class="control-label col-xs-12 col-sm-2">{:__('简介')}:</label>
