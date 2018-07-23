@@ -8,10 +8,11 @@
     </div>
 
     <div class="form-group">
-        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('是否链接')}:</label>
+        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('链接形式')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <label for="row[is_link]-normal"><input class="is_link" name="row[is_link]" {if $row.is_link == 1}checked{/if}  type="radio" value="1"> 是</label>
-            <label for="row[is_link]-normal"><input class="is_link" name="row[is_link]" {if $row.is_link == 0}checked{/if} type="radio" value="0"> 否</label>
+            <label for="row[is_link]-normal"><input class="is_link" name="row[is_link]" {if $row.is_link == 1}checked{/if}  type="radio" value="1"> 外部链接</label>
+            <label for="row[is_link]-normal"><input class="is_link" name="row[is_link]" {if $row.is_link == 2}checked{/if} type="radio" value="2"> 内部推荐</label>
+            <label for="row[is_link]-normal"><input class="is_link" name="row[is_link]" {if $row.is_link == 3}checked{/if} type="radio" value="3"> 自定义添加</label>
         </div>
     </div>
 
@@ -89,10 +90,17 @@
             if(fee == 1){
                 $('#prices').show();
                 $('#title').show()
+                $('#selectcat').show();
             }
-            if(fee == 0){
+            if(fee == 2){
                 $('#prices').hide();
                 $('#title').hide()
+                $('#selectcat').show();
+            }
+            if(fee == 3){
+                $('#prices').hide();
+                $('#title').show();
+                $('#selectcat').hide();
             }
         });
     })

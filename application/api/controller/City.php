@@ -33,9 +33,14 @@ class City extends Api
         $this->row = input('row');
         $this->row = base64_decode($this->row);
         $this->row = json_decode($this->row);
-        $this->userid = $this->row->userid;
+        if(isset($this->row->urlParams)){
+            $this->row = $this->row->urlParams;
+        }
+        if(isset($this->row->userid) && $this->row->userid !== '-1'){
+            $this->userid = $this->row->userid;
+            $this->rule($token,$this->userid);
+        }
         $this->cid = $this->row->cid;
-        $this->rule($token,$this->userid);
         $this->page   = isset($this->row->page) ? $this->row->page : 1;
         $this->offset = ($this->page - 1) * 10;
         $this->limit  = $this->page * 10;
@@ -43,9 +48,20 @@ class City extends Api
     }
     // 列表页
     public function index(){
-        $result = $this->model->field('id,title,inputtime,thumb,view')->where('status = 1 AND cid = '.$this->cid)->limit($this->offset, $this->limit)->select();
-        // $res = $this->artist_show($result);
-        $result = $this->init_thumbs($result);
+        if($this->cid !== '0'){
+            $where = "cid = $this->cid";
+        }else{
+            $where = '1 = 1';
+        }
+        $banner = $this->init_thumbs(Db::table('fa_banner')->field('id,title,thumb,model,cid,url')->where("model = 'city' and ".$where)->order('inputtime desc')->limit(3)->select());
+        $city = $this->init_thumbs($this->model->field('id,title,inputtime,thumb,view,cid')->where('status = 1 AND '.$where)->order('inputtime desc')->limit($this->offset, $this->limit)->select());
+        
+        foreach ($city as $c => $cy) {
+            $city[$c]['count'] = Db::table('fa_'.$this->table.'_comment')->where('vid = '.$cy['id'])->count();
+            $city[$c]['model'] = $this->table;
+        }
+        $result['banner'] = $banner;
+        $result['city'] = $city;
         $status = '1';
         $mes = '获取成功😏';
         $res = $this->json_echo($status,$mes,$result);
@@ -64,6 +80,7 @@ class City extends Api
         $userpay = $this->is_fee($id,$userid,$data['is_fee'],$data['price'],$model['price']);
         // 艺人信息处理
         $res = $this->artist_show($data);
+        $res['url'] = $this->website;
         // 视频解密处理
         // $res['video'] = $this->base64_de($res['video']);
         // 观看进度

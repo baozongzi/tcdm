@@ -261,16 +261,16 @@ class Api extends Controller
     }
     // 验证token
     public function rule($token,$userid){
-        $user = Db::table("fa_user")->field('access_token')->where('id = '.$userid)->find();
-        $access_token = $user['access_token'];
-        if($access_token == $token){
+        // $user = Db::table("fa_user")->field('access_token')->where('id = '.$userid)->find();
+        // $access_token = $user['access_token'];
+        // if($access_token == $token){
 
-        }else{
-            $err['id'] = '0';
-            $json_arr = array('status'=>1,'msg'=>'请按套路出牌😏😏','data'=>$err );
-            $json_str = json_encode($json_arr);
-            exit($json_str);
-        }
+        // }else{
+        //     $err['id'] = '0';
+        //     $json_arr = array('status'=>1,'msg'=>'请按套路出牌😏😏','data'=>$err );
+        //     $json_str = json_encode($json_arr);
+        //     exit($json_str);
+        // }
     }
     // json化输出
     public function json_echo($status,$mes,$result){
@@ -377,7 +377,7 @@ class Api extends Controller
         }
         return $is_collected;
     }
-    // 收藏接口 
+    // 收藏接口
     public function collectionsed($row,$table,$model,$models){
         $userid = $row->userid;//当前登录的用户
         $vid = $row->vid;//当前视频id
@@ -403,7 +403,7 @@ class Api extends Controller
         return $data;
     }
     //评论
-    public function comment($userid,$id,$tablename,$offset, $limit){
+    public function comment($id,$tablename,$offset, $limit){
         $count = Db::table('fa_'.$tablename.'_comment')->where("vid = ".$id)->count();
         $comment = Db::table('fa_'.$tablename.'_comment')->where("vid = ".$id)->order('inputtime desc')->limit($offset, $limit)->select();
         foreach ($comment as $com => $value) {
@@ -440,39 +440,40 @@ class Api extends Controller
     
     // 初始化图片
     public function init_thumbs($result){
-        foreach ($result as $r => $res) {
-            $result[$r]['thumb'] = explode(',',$result[$r]['thumb']);
-            if(count($result[$r]['thumb']) > 1){
-                foreach ($result[$r]['thumb'] as $t => $tb) {
-                    $http = explode('://',$result[$r]['thumb'][$t]);
-                    if($http[0] !== 'http' && $http[0] !== 'https'){
-                        $result[$r]['thumb'][$t] = $this->website.$tb;
+        if(!isset($result['thumb'])){
+            foreach ($result as $r => $res) {
+                $result[$r]['thumb'] = explode(',',$result[$r]['thumb']);
+                if(count($result[$r]['thumb']) > 1){
+                    foreach ($result[$r]['thumb'] as $t => $tb) {
+                        $http = explode('://',$result[$r]['thumb'][$t]);
+                        if($http[0] !== 'http' && $http[0] !== 'https'){
+                            $result[$r]['thumb'][$t] = $this->website.$tb;
+                        }else{
+                            $result[$r]['thumb'][$t] = $tb;
+                        }
+                        if($http[0] == 'https'){
+                            $result[$r]['thumb'][$t] = $tb;
+                        }
+                    }
+                }else{
+                    if($result[$r]['thumb']){
+                        $exps = $result[$r]['thumb'];
+                        $exp = $exps[0];
                     }else{
-                        $result[$r]['thumb'][$t] = $tb;
+                        $exp = $res['thumb'][0];
+                    }
+                    $http = explode('://',$exp);
+                    if($http[0] !== 'http' && $http[0] !== 'https'){
+                        $result[$r]['thumb'] = $this->website.$exp;
+                    }else{
+                        $result[$r]['thumb'] = $exp;
                     }
                     if($http[0] == 'https'){
-                        $result[$r]['thumb'][$t] = $tb;
+                        $result[$r]['thumb'] = $res['thumb'];
                     }
                 }
-            }else{
-                if($result[$r]['thumb']){
-                    $exps = $result[$r]['thumb'];
-                    $exp = $exps[0];
-                }else{
-                    $exp = $res['thumb'][0];
-                }
-                $http = explode('://',$exp);
-                if($http[0] !== 'http' && $http[0] !== 'https'){
-                    $result[$r]['thumb'] = $this->website.$exp;
-                }else{
-                    $result[$r]['thumb'] = $exp;
-                }
-                if($http[0] == 'https'){
-                    $result[$r]['thumb'] = $res['thumb'];
-                }
             }
-        }
-        if(isset($result['thumb'])){
+        }else{
             $https = explode('://',$result['thumb']);
             $http = explode('://',$result['thumb']);
             if($http[0] !== 'http' || $https[0] !== 'https'){

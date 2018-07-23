@@ -60,9 +60,14 @@ class Match extends Backend
         if ($this->request->isPost())
         {
             $params = $this->request->post("row/a", [], 'strip_tags');
+            $params['inputtime'] = time();
             $params['starttime'] = strtotime($params['starttime']);
             $params['endtime'] = strtotime($params['endtime']);
             $params['updatetime'] = time();
+            $belong_to = explode('_',$params['belong_to']);
+            $params['belong_to'] = $belong_to[0];
+            $params['model'] = $belong_to[1];
+
             if ($params)
             {
                 $this->model->save($params);
@@ -96,6 +101,10 @@ class Match extends Backend
             $params['starttime'] = strtotime($params['starttime']);
             $params['endtime'] = strtotime($params['endtime']);
             $params['updatetime'] = time();
+            $belong_to = explode('_',$params['belong_to']);
+            $params['belong_to'] = $belong_to[0];
+            $params['model'] = $belong_to[1];
+            
             if ($params)
             {
                 $result = $this->model->save($params,['id' => $ids]);

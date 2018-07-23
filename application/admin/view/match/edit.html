@@ -19,6 +19,18 @@
             </select>
         </div>
     </div>
+    
+    <div class="form-group">
+        <label for="c-type" class="control-label col-xs-12 col-sm-2">{:__('归属说明')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[belong_to]">
+                <option value="健康养生_health" {if $row.belong_to == '健康养生'}selected{/if} >健康养生</option>
+                <option value="城市文化_city" {if $row.belong_to == '城市文化'}selected{/if} >城市文化</option>
+                <option value="成语故事_story" {if $row.belong_to == '成语故事'}selected{/if} >成语故事</option>
+                <option value="综艺节目_variety" {if $row.belong_to == '综艺节目'}selected{/if} >综艺节目</option>
+            </select>
+        </div>
+    </div>
 
     <div class="form-group">
         <label for="c-answer" class="control-label col-xs-12 col-sm-2">{:__('报名人数上线')}:</label>

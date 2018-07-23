@@ -33,10 +33,15 @@ class Variety extends Api
         $this->row = input('row');
         $this->row = base64_decode($this->row);
         $this->row = json_decode($this->row);
-        $this->userid = $this->row->userid;
+        if(isset($this->row->urlParams)){
+            $this->row = $this->row->urlParams;
+        }
+        if(isset($this->row->userid) && $this->row->userid !== '-1'){
+            $this->userid = $this->row->userid;
+            $this->rule($token,$this->userid);
+        }
         $this->cid = $this->row->cid;
-        $this->rule($token,$this->userid);
-        $this->page   = $this->row->page ? $this->row->page : 1;
+        $this->page   = isset($this->row->page) ? $this->row->page : 1;
         $this->offset = ($this->page - 1) * 10;
         $this->limit  = $this->page * 10;
         $this->website = model('Config')->where('name', 'website')->value('value');
@@ -44,9 +49,14 @@ class Variety extends Api
     }
     // 列表页
     public function index(){
-        $result = $this->model->field('id,title,inputtime,thumb')->where('status = 1')->limit($this->offset, $this->limit)->select();
-        // $res = $this->artist_show($result);
-        $result = $this->init_thumbs($result);
+        $banner = $this->init_thumbs(Db::table('fa_banner')->field('id,title,thumb,model,cid,url')->where("model = 'variety' and cid = $this->cid")->order('inputtime desc')->limit(3)->select());
+        $variety = $this->init_thumbs($this->model->field('id,title,inputtime,thumb,view')->where('status = 1')->order('inputtime desc')->limit($this->offset, $this->limit)->select());
+        foreach ($variety as $v => $vy) {
+            // $variety[$v]['count'] = Db::table('fa_'.$this->table.'_comment')->where('vid = '.$vy['id'])->count();
+            $variety[$v]['model'] = $this->table;
+        }
+        $result['banner'] = $banner;
+        $result['variety'] = $variety;
         $status = '1';
         $mes = '获取成功😏';
         $res = $this->json_echo($status,$mes,$result);

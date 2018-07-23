@@ -1,30 +1,32 @@
 <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
-    <div class="form-group">
-        <label for="c-type" class="control-label col-xs-12 col-sm-2">{:__('Type')}:</label>
+    <div class="form-group" id="title" >
+        <label for="c-answer" class="control-label col-xs-12 col-sm-2">{:__('title')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[type]">
-                {foreach name="typeList" item="vo"}
-                <option value="{$key}" {in name="key" value="$row.type"}selected{/in}>{$vo}</option>
-                {/foreach}
-            </select>
+            <input id="c-title" class="form-control" name="row[title]" type="text" value="{$row.title}" >
         </div>
     </div>
-    <div class="form-group">
-        <label for="c-page" class="control-label col-xs-12 col-sm-2">{:__('Page')}:</label>
+
+    <div class="form-group" id="description" >
+        <label for="c-answer" class="control-label col-xs-12 col-sm-2">{:__('描述')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <select id="c-type" data-rule="required" class="form-control selectpicker" name="row[page]">
-                {foreach name="pageList" item="vo"}
-                <option value="{$key}" {in name="key" value="$row.page"}selected{/in}>{$vo}</option>
-                {/foreach}
-            </select>
+            <input id="c-description" class="form-control" name="row[description]" type="text" value="{$row.description}" >
         </div>
     </div>
+
+    <div class="form-group">
+        <label for="content" class="control-label col-xs-12 col-sm-2">{:__('链接形式')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <label for="row[is_link]-normal"><input class="is_link" name="row[is_link]" {if $row.is_link == 1}checked{/if}  type="radio" value="1"> 外部链接</label>
+            <label for="row[is_link]-normal"><input class="is_link" name="row[is_link]" {if $row.is_link == 0}checked{/if}  type="radio" value="0"> 自定义添加</label>
+        </div>
+    </div>
+
     <div class="form-group">
         <label for="c-images" class="control-label col-xs-12 col-sm-2">{:__('Images')}:</label>
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
-                <input id="c-images" class="form-control" size="50" value="{$row.images}" name="row[images]" type="text">
+                <input id="c-images" class="form-control" size="50" value="{$row.thumb}" name="row[thumb]" type="text">
                 <div class="input-group-addon no-border no-padding">
                     <span><button type="button" id="plupload-images" class="btn btn-danger plupload" data-input-id="c-images" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="true" data-preview-id="p-images"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
                     <span><button type="button" id="fachoose-images" class="btn btn-primary fachoose" data-input-id="c-images" data-mimetype="image/*" data-multiple="true"><i class="fa fa-list"></i> {:__('Choose')}</button></span>

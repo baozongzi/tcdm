@@ -472,10 +472,29 @@ class Backend extends Controller
         return $data;
     }
 
+    // 检索众筹信息
+    public function crowd_search(){
+        $title = input('title');
+        $model = input('model');
+        $where = '1 = 1';
+        if($title !== ""){
+            $where .= " AND title = '".$title."'";
+        }
+        if($model !== ""){
+            $where .= " AND model = '".$model."'";
+        }
+        $data = Db::table('fa_crowdfunding')->where($where)->field('id,thumb,title')->select();
+        foreach ($data as $da => $das) {
+            if(explode(',',$data[$da]['thumb'])){
+                $data[$da]['thumb'] = explode(',',$data[$da]['thumb'])[0];
+            }
+        }
+        return $data;
+    }
+
     // 添加、编辑 艺人信息处理
-    public function artist_handles($lastid,$params,$users,$table){
+    public function artist_handles($lastid,$params,$users,$info,$table){
         // $params['description'] = mb_substr(rtrim($params['description'],'.'),0,100,'utf-8').'...';
-        
         $userid = $users['userid'];
         $cosplay = $users['cosplay'];
         $artist = array();
@@ -487,8 +506,26 @@ class Backend extends Controller
                 }
             }
         }
-        
         $params['artist'] = !empty($artist) ? serialize($artist) : '';
+
+        $heads = !empty($info['head']) ?$this->base64_image($info['head']) : '';
+
+        $names = $info['name'];
+        $managers = $info['manager'];
+        $team = array();
+        if(!empty($heads)){
+            foreach ($heads as $hid => $hea) {
+                foreach ($names as $nid => $nam) {
+                    foreach ($managers as $mid => $man) {
+                        $team[$hid]['head'] = $heads[$hid];
+                        $team[$hid]['name'] = $names[$hid];
+                        $team[$hid]['manager'] = $managers[$hid];
+                    }
+                }
+            }
+        }
+        $params['team'] = !empty($team) ? serialize($team) : '';
+        
         Db::startTrans(); //启动事务
         try {
             if($lastid){
@@ -509,6 +546,33 @@ class Backend extends Controller
             Db::rollback(); //回滚事务
         }
         return $result;
+    }
+
+    public function base64_image($imgs){
+        $path = 'uploads/'.date('Ymd',time()).'/';
+        $this->creatfile($path);
+        
+        foreach ($imgs as $is => $img) {
+            if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $img, $basehead)){ 
+                $type = $basehead[2];
+
+                $filename = date("Ymd",time()).time().rand(111,999).'.jpg';
+                $images[] = '/'.$path.$filename;
+                file_put_contents($path.$filename, base64_decode(str_replace($basehead[1], '', $img))) ;
+            }
+            else{
+                $images[] = $imgs[$is];
+            }
+        }
+        return $images;
+    }
+    //递归创建文件夹
+    public function creatfile($path){
+        if (!file_exists($path))
+        {
+            $this->creatfile(dirname($path));
+            mkdir($path, 0777);
+        }
     }
 
     //存放无限分类
@@ -537,7 +601,7 @@ class Backend extends Controller
     }
     // 随机字符串
     function randStr($len){
-        $str = "ABCDEFGHIJKLMNOPQRSTUVWSYZabcdefghijklmnopqrstuvwsyz0123456789";
+        $str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         return substr(str_shuffle($str),0,$len);
     }
     // url解密

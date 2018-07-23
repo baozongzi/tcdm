@@ -108,13 +108,16 @@ class Banner extends Backend
         if ($this->request->isPost())
         {
             $params = $this->request->post("row/a");
-            if($params['is_link'] == '1'){
+            if($params['is_link'] == '1' || $params['is_link'] == '3'){
                 $params['title'] = $params['mytitle'];
             }
             if($params['is_index'] == '1'){
                 $params['catname'] = '首页';
             }
             unset($params['mytitle']);
+            // echo "<pre>";
+            // print_r($params);
+            // die;
             $params['inputtime'] = time();
             if ($params)
             {

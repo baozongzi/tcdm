@@ -106,9 +106,11 @@ class Videos extends Backend
         {
             $params = $this->request->post("row/a");
             $user = $this->request->post('user/a');
-
+            $info = $this->request->post('info/a');
+            
             $params['inputtime'] = time();
-            $result = $this->artist_handles('',$params,$user,$this->table);
+            // $params['updatetime'] = time();
+            $result = $this->artist_handles('',$params,$user,$info,$this->table);
             if ($result)
             {
                 // $this->model->save($params);
@@ -118,11 +120,13 @@ class Videos extends Backend
         }
         $list = $this->rulelist;
         $artists = "";
+        $team = "";
         $row['is_fee'] = "1";
         $row['price'] = "";
         $row['video'] = "";
         $this->view->assign("row", $row);
         $this->view->assign("artists", $artists);
+        $this->view->assign("team", $team);
         $this->view->assign("list",$list);
         return $this->view->fetch();
     }
@@ -149,8 +153,9 @@ class Videos extends Backend
             $params = $this->request->post("row/a");
             $params['updatetime'] = time();
             $user = $this->request->post('user/a');
+            $info = $this->request->post('info/a');
             
-            $result = $this->artist_handles($ids,$params,$user,$this->table);
+            $result = $this->artist_handles($ids,$params,$user,$info,$this->table);
             if ($result)
             {
                 $result = $this->model->save($params,['id' => $ids]);
@@ -178,10 +183,15 @@ class Videos extends Backend
         }else{
             $artists = "";
         }
-        
-        $this->view->assign("artists", $artists);
-        $this->view->assign("list",$list);
+        if($row['team']){
+           $team = $row['team'] = unserialize($row['team']);
+        }else{
+            $team = "";
+        }
         $this->view->assign("row", $row);
+        $this->view->assign("artists", $artists);
+        $this->view->assign("team", $team);
+        $this->view->assign("list",$list);
         return $this->view->fetch();
     }
 

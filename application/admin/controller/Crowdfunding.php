@@ -66,8 +66,12 @@ class Crowdfunding extends Backend
             $params['updatetime'] = time();
             $params['endtime'] = strtotime($params['endtime']);
             $user = $this->request->post('user/a');
+            $info = $this->request->post('info/a');
+            $belong_to = explode('_',$params['belong_to']);
+            $params['belong_to'] = $belong_to[0];
+            $params['model'] = $belong_to[1];
             
-            $result = $this->artist_handles('',$params,$user,$this->table);
+            $result = $this->artist_handles('',$params,$user,$info,$this->table);
             if ($params)
             {
                 $this->model->save($params);
@@ -76,11 +80,13 @@ class Crowdfunding extends Backend
             $this->error();
         }
         $artists = "";
+        $team = "";
         $row['is_fee'] = "1";
         $row['price'] = "";
         $row['video'] = "";
         $this->view->assign("row", $row);
         $this->view->assign("artists", $artists);
+        $this->view->assign("team", $team);
         return $this->view->fetch();
     }
 
@@ -106,8 +112,12 @@ class Crowdfunding extends Backend
             $params = $this->request->post("row/a");
             $params['endtime'] = strtotime($params['endtime']);
             $user = $this->request->post('user/a');
-           
-            $result = $this->artist_handles($ids,$params,$user,$this->table);
+            $info = $this->request->post('info/a');
+            $belong_to = explode('_',$params['belong_to']);
+            $params['belong_to'] = $belong_to[0];
+            $params['model'] = $belong_to[1];
+            
+            $result = $this->artist_handles($ids,$params,$user,$info,$this->table);
             if ($params)
             {
                 $result = $this->model->save($params,['id' => $ids]);
@@ -135,9 +145,15 @@ class Crowdfunding extends Backend
         }else{
             $artists = "";
         }
+        if($row['team']){
+           $team = $row['team'] = unserialize($row['team']);
+        }else{
+            $team = "";
+        }
         $template = "edit";
         $this->view->assign("row", $row);
         $this->view->assign("artists", $artists);
+        $this->view->assign("team", $team);
         return $this->view->fetch();
     }
 

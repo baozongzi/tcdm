@@ -81,10 +81,11 @@ class Story extends Backend
         {
             $params = $this->request->post("row/a");
             $user = $this->request->post('user/a');
+            $info = $this->request->post('info/a');
             
             $params['inputtime'] = time();
             $params['updatetime'] = time();
-            $result = $this->artist_handles('',$params,$user,$this->table);
+            $result = $this->artist_handles('',$params,$user,$info,$this->table);
             if ($result)
             {
                 // $this->model->save($params);
@@ -93,11 +94,14 @@ class Story extends Backend
             $this->error();
         }
         $artists = "";
+        $team = "";
         $row['is_fee'] = "1";
         $row['price'] = "";
         $row['video'] = "";
+        $row['crowd'] = '';
         $this->view->assign("row", $row);
         $this->view->assign("artists", $artists);
+        $this->view->assign("team", $team);
         return $this->view->fetch();
     }
 
@@ -123,8 +127,9 @@ class Story extends Backend
             $params = $this->request->post("row/a");
             $params['updatetime'] = time();
             $user = $this->request->post('user/a');
-           
-            $result = $this->artist_handles($ids,$params,$user,$this->table);
+            $info = $this->request->post('info/a');
+            
+            $result = $this->artist_handles($ids,$params,$user,$info,$this->table);
             if ($result)
             {
                 $result = $this->model->save($params,['id' => $ids]);
@@ -136,6 +141,7 @@ class Story extends Backend
             }
             $this->error(__('Parameter %s can not be empty', ''));
         }
+
         // 判断是否选择了艺人
         if($row['artist']){
             $row['artist'] = unserialize($row['artist']);
@@ -151,10 +157,20 @@ class Story extends Backend
         }else{
             $artists = "";
         }
+        if($row['team']){
+           $team = $row['team'] = unserialize($row['team']);
+        }else{
+            $team = "";
+        }
+        $row['crowd'] = Db::table('fa_crowdfunding')->where('id = '.$row['crowid'])->field('id,thumb,title')->find();
+        if(explode(',',$row['crowd']['thumb'])){
+            $row['crowd']['thumb'] = explode(',',$row['crowd']['thumb'])[0];
+        }
         $template = "edit";
         
         $this->view->assign("row", $row);
         $this->view->assign("artists", $artists);
+        $this->view->assign("team", $team);
         return $this->view->fetch($template);
     }
 

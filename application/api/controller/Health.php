@@ -30,7 +30,13 @@ class Health extends Api
         $this->row = input('row');
         $this->row = base64_decode($this->row);
         $this->row = json_decode($this->row);
-        $this->userid = $this->row->userid;
+        if(isset($this->row->urlParams)){
+            $this->row = $this->row->urlParams;
+        }
+        if(isset($this->row->userid) && $this->row->userid !== '-1'){
+            $this->userid = $this->row->userid;
+            $this->rule($token,$this->userid);
+        }
         $this->cid = $this->row->cid;
         $this->page   = isset($this->row->page) ? $this->row->page : 1;
         $this->offset = ($this->page - 1) * 10;
@@ -59,14 +65,16 @@ class Health extends Api
             return false;
         }
 
-        $this->rule($token,$this->userid);
 
     }
     // 列表页
     public function index(){
         $banner = $this->init_thumbs(Db::table('fa_banner')->field('id,title,thumb,model,cid,url')->where("model = 'health' and cid = $this->cid")->order('inputtime desc')->limit(3)->select());
-        $health = $this->init_thumbs(Db::table("fa_".$this->table)->field('id,title,inputtime,thumb,view')->where('status = 1')->order('id desc')->limit($this->offset, $this->limit)->select());
-        
+        $health = $this->init_thumbs(Db::table("fa_".$this->table)->field('id,title,description,inputtime,thumb,view,cid')->where('status = 1')->order('id desc')->limit($this->offset, $this->limit)->select());
+        foreach ($health as $h => $hh) {
+            $health[$h]['count'] = Db::table('fa_'.$this->table.'_comment')->where('vid = '.$hh['id'])->count();
+            $health[$h]['model'] = 'health';
+        }
         $result['banner'] = $banner;
         $result['health'] = $health;
         // $res = $this->artist_show($result);
@@ -82,7 +90,7 @@ class Health extends Api
         $userid = $this->userid;//当前登录的用户
 
         //数据详情
-        $data = $this->init_thumbs($this->model->where('id = '.$id)->find());
+        $data = $this->init_thumbs($this->model->where('id = '.$id)->field('id,title,description,content,view,thumb,is_fee,price,video,artist')->find());
         // 一级栏目查询
         $model = $this->AuthRule->where("tables = '".$this->table."'")->find();
         // 判断视频是否收费或者用户是否为vip

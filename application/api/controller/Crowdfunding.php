@@ -33,11 +33,16 @@ class Crowdfunding extends Api
         $this->row = input('row');
         $this->row = base64_decode($this->row);
         $this->row = json_decode($this->row);
-        $userid = $this->row->userid;
-        $this->rule($token,$userid);
+        if(isset($this->row->urlParams)){
+            $this->row = $this->row->urlParams;
+        }
+        if(isset($this->row->userid) && $this->row->userid !== '-1'){
+            $this->userid = $this->row->userid;
+            $this->rule($token,$this->userid);
+        }
         $this->page   = isset($this->row->page) ? $this->row->page : 1;
-        $this->offset = ($this->page - 1) * 2;
-        $this->limit  = $this->page * 2;
+        $this->offset = ($this->page - 1) * 10;
+        $this->limit  = $this->page * 10;
         $this->website = model('Config')->where('name', 'website')->value('value');
 
         // print_r($_SERVER);
@@ -59,7 +64,39 @@ class Crowdfunding extends Api
     }
     // 列表页
     public function index(){
-        $result = Db::table('fa_crowdfunding')->field('id,title,inputtime,thumb')->where('status = 1')->limit($this->offset, $this->limit)->select();
+        $result = Db::table('fa_crowdfunding')->alias('fc')
+                    ->join('fa_crowdfunding_comment fcc','fcc.vid = fc.id')
+                    ->field('id,title,total_money,success,person_num,belong_to,thumb,successed,model,count(vid) as num')
+                    ->group('vid')
+                    ->order('fc.id desc')
+                    ->where('status = 1')
+                    ->limit($this->offset, $this->limit)
+                    ->select();
+        foreach ($result as $re => $res) {
+            if(explode(',',$result[$re]['thumb'])){
+                $thumbs = explode(',',$result[$re]['thumb']);
+                $result[$re]['thumb'] = $thumbs[0];
+            }
+            switch ($result[$re]['successed']) {
+                case '1':
+                    $result[$re]['successed'] = '火热进行中^_^';
+                    break;
+                case '2':
+                    $result[$re]['successed'] = '众筹成功^_^';
+                    break;
+                case '0':
+                    $result[$re]['successed'] = '众筹失败(╥╯^╰╥)';
+                    break;
+                default:
+                    break;
+            }
+            
+            if($result[$re]['success'] == '0.00'){
+                $result[$re]['percentage'] = '0.00';
+            }else{
+                $result[$re]['percentage'] = number_format($result[$re]['success']/$result[$re]['total_money'],3);
+            }
+        }
         //图片格式化
         $result = $this->init_thumbs($result);
         $status = '1';
@@ -74,7 +111,7 @@ class Crowdfunding extends Api
         $id = $this->row->vid;//视频id
         $userid = $this->row->userid;//当前登录的用户
         //数据详情
-        $data = $this->init_thumbs($this->model->where('id = '.$id)->field('id,title,total_money,success,person_num,successed,description,content,artist')->find());
+        $data = $this->init_thumbs($this->model->where('id = '.$id)->field('id,title,total_money,success,person_num,successed,thumb,description,contteam,content,artist')->find());
         switch ($data['successed']){
             case '1':
                 $data['successed'] = '火热进行中^_^';
@@ -86,7 +123,12 @@ class Crowdfunding extends Api
                 $data['successed'] = '众筹失败(╥╯^╰╥)';
                 break;
             default:
-                return "";
+                break;
+        }
+        if($data['success'] == '0.00'){
+            $data['percentage'] = '0.00';
+        }else{
+            $data['percentage'] = number_format($data['success']/$data['total_money'],3);
         }
         // 一级栏目查询
         $model = $this->AuthRule->where("tables = '".$this->table."'")->find();
@@ -105,14 +147,10 @@ class Crowdfunding extends Api
 
         // $res['comment'] = $comment;
         if($res){
-            $status = '1';
-            $mes = '获取成功😏';
-            $res = $this->json_echo($status,$mes,$res);
+            $res = $this->json_echo('1','获取成功😏',$res);
             return $res;
         }else{
-            $status = '0';
-            $mes = '获取失败😏';
-            $res = $this->json_echo($status,$mes,array());
+            $res = $this->json_echo('0','获取失败😏',array());
             return $res;
         }
     }

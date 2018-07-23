@@ -14,7 +14,7 @@ class Ad extends Model
 
     // 定义时间戳字段名
     protected $createTime = false;
-    protected $updateTime = false;
+    protected $updateTime = true;
 
     // 定义广告类型
     protected $adType = [0 => 'banner广告', 1 => '插屏广告'];
