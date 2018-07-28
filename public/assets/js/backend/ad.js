@@ -8,7 +8,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     index_url: 'ad/index',
                     add_url: 'ad/add',
                     edit_url: 'ad/edit',
-                    del_url: 'ad/del',
+                    // del_url: 'ad/del',
                     multi_url: 'ad/multi',
                     table: 'ad',
                 }
@@ -25,9 +25,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {checkbox: true},
                         {field: 'id', title: __('Id'), operate:false},
-                        {field: 'type', title: __('Type'), searchList: $.getJSON('ad/getTypeListAjax'), formatter: Controller.api.formatter.type},
-                        {field: 'page', title: __('Page'), searchList: $.getJSON('ad/getPageListAjax'), formatter: Controller.api.formatter.page},
-                        {field: 'images', title: __('Images'), formatter: Table.api.formatter.images, operate:false},
+                        {field: 'thumb', title: __('Images'), formatter: Table.api.formatter.images, operate:false},
                         {field: 'url', title: __('Url'), formatter: Controller.api.formatter.url},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]

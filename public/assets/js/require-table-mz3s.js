@@ -41,6 +41,7 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 add_url: '',
                 edit_url: '',
                 show_url: '',
+                examine_url:'';
                 del_url: '',
                 import_url: '',
                 multi_url: '',
@@ -58,6 +59,7 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             refreshbtn: '.btn-refresh',
             addbtn: '.btn-add',
             editbtn: '.btn-edit',
+            examinebtn: '.btn-examineone',
             delbtn: '.btn-del',
             importbtn: '.btn-import',
             multibtn: '.btn-multi',
@@ -249,6 +251,10 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     e.preventDefault();
                     Fast.api.open(options.extend.show_url + (options.extend.show_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + $(this).data("id"), __('Edit'), $(this).data() || {});
                 });
+                $(table).on("click", "[data-id].btn-examine", function (e) {
+                    e.preventDefault();
+                    Fast.api.open(options.extend.examine_url + (options.extend.examine_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + $(this).data("id"), __('Edit'), $(this).data() || {});
+                });
                 $(table).on("click", "[data-id].btn-del", function (e) {
                     e.preventDefault();
                     var id = $(this).data("id");
@@ -292,6 +298,12 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         e.preventDefault();
                         var options = $(this).closest('table').bootstrapTable('getOptions');
                         Fast.api.open(options.extend.show_url + (options.extend.show_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + row[options.pk], __('Edit'), $(this).data() || {});
+                    },
+                    'click .btn-examineone': function (e, value, row, index) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        var options = $(this).closest('table').bootstrapTable('getOptions');
+                        Fast.api.open(options.extend.examine_url + (options.extend.examine_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + row[options.pk], __('Edit'), $(this).data() || {});
                     },
                     'click .btn-delone': function (e, value, row, index) {
                         e.stopPropagation();

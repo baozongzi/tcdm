@@ -41,6 +41,7 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 add_url: '',
                 edit_url: '',
                 show_url: '',
+                examine_url:'',
                 del_url: '',
                 import_url: '',
                 multi_url: '',
@@ -63,6 +64,7 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             multibtn: '.btn-multi',
             disabledbtn: '.btn-disabled',
             editonebtn: '.btn-editone',
+            examinebtn: '.btn-examineone',
             showonebtn: '.btn-showone',
             dragsortfield: 'weigh',
         },
@@ -245,10 +247,16 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     e.preventDefault();
                     Fast.api.open(options.extend.edit_url + (options.extend.edit_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + $(this).data("id"), __('Edit'), $(this).data() || {});
                 });
+                // ---木zi3石---
                 $(table).on("click", "[data-id].btn-show", function (e) {
                     e.preventDefault();
                     Fast.api.open(options.extend.show_url + (options.extend.show_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + $(this).data("id"), __('Edit'), $(this).data() || {});
                 });
+                $(table).on("click", "[data-id].btn-examine", function (e) {
+                    e.preventDefault();
+                    Fast.api.open(options.extend.examine_url + (options.extend.examine_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + $(this).data("id"), __('Edit'), $(this).data() || {});
+                });
+
                 $(table).on("click", "[data-id].btn-del", function (e) {
                     e.preventDefault();
                     var id = $(this).data("id");
@@ -287,12 +295,20 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         var options = $(this).closest('table').bootstrapTable('getOptions');
                         Fast.api.open(options.extend.edit_url + (options.extend.edit_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + row[options.pk], __('Edit'), $(this).data() || {});
                     },
+                    // ---木zi3石---
                     'click .btn-showone': function (e, value, row, index) {
                         e.stopPropagation();
                         e.preventDefault();
                         var options = $(this).closest('table').bootstrapTable('getOptions');
                         Fast.api.open(options.extend.show_url + (options.extend.show_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + row[options.pk], __('Edit'), $(this).data() || {});
                     },
+                    'click .btn-examineone': function (e, value, row, index) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        var options = $(this).closest('table').bootstrapTable('getOptions');
+                        Fast.api.open(options.extend.examine_url + (options.extend.examine_url.match(/(\?|&)+/) ? "&ids=" : "/ids/") + row[options.pk], __('Edit'), $(this).data() || {});
+                    },
+                    
                     'click .btn-delone': function (e, value, row, index) {
                         e.stopPropagation();
                         e.preventDefault();
@@ -413,6 +429,10 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     // 判断是否可以查看更多其他信息---木zi3石---
                     if(options['extend']['show_url']){
                         buttons.push({name: 'show', icon: 'fa fa-eye', classname: 'btn btn-xs btn-success btn-showone', url: options.extend.show_url});
+                    }
+                    // 审核按钮
+                    if(options['extend']['examine_url']){
+                        buttons.push({name: 'examine', icon: 'fa fa-gavel', classname: 'btn btn-xs btn-success btn-examineone', url: options.extend.examine_url});
                     }
                     
                     buttons.push({name: 'del', icon: 'fa fa-trash', classname: 'btn btn-xs btn-danger btn-delone'});

@@ -328,6 +328,7 @@ class Api extends Controller
         if(empty($userpay)){
             return false;
         }
+        $userpay['vip'] = '1';
         return $userpay;
     }
     
@@ -481,5 +482,14 @@ class Api extends Controller
             }
         }
         return $result;
+    }
+
+    //递归创建文件夹
+    public function creatfile($path){
+      if (!file_exists($path))
+      {
+       $this->creatfile(dirname($path));
+       mkdir($path, 0777);
+      }
     }
 }

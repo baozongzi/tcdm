@@ -25,4 +25,8 @@ class Index extends Frontend
         return jsonp(['newslist' => $newslist, 'new' => count($newslist), 'url' => 'http://www.fastadmin.net?ref=news']);
     }
 
+    public function advban(){
+        echo "页面开发中";
+    }
+
 }

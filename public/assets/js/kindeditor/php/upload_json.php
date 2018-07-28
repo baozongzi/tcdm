@@ -12,6 +12,7 @@ require_once 'JSON.php';
 $php_path = dirname(__FILE__) . '/';
 $php_url = dirname($_SERVER['PHP_SELF']) . '/';
 
+$web = $_SERVER['HTTP_ORIGIN'];
 //文件保存目录路径
 $save_path = $php_path . '../attached/';
 //文件保存目录URL
@@ -123,7 +124,8 @@ if (empty($_FILES) === false) {
 		alert("上传文件失败。");
 	}
 	@chmod($file_path, 0644);
-	$file_url = $save_url . $new_file_name;
+	// $file_url = $save_url . $new_file_name;
+	$file_url = $web.'/assets/js/kindeditor/attached/image/'.$ymd.'/'.$new_file_name;
 
 	header('Content-type: text/html; charset=UTF-8');
 	$json = new Services_JSON();

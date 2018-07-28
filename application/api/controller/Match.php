@@ -153,32 +153,41 @@ class Match extends Api
     // 查看详情
     public function show(){
         $id = $this->row->vid;//视频id
-
         //数据详情
-        $data = $this->init_thumbs($this->model->where('id = '.$id)->field('id,title,description,content,view,thumb,is_fee,price,video,artist')->find());
+        $res = $this->init_thumbs($this->model->where('id = '.$id)->field('id,title,description,content,thumb')->find());
+
         // 一级栏目查询
         $model = $this->AuthRule->where("tables = '".$this->table."'")->find();
         // 艺人信息处理
-        $res = $this->artist_show($data);
+        // $res = $this->artist_show($data);
         // 视频解密处理
         // $res['video'] = $this->base64_de($res['video']);
-        if($this->userid){
+        if(isset($this->userid)){
             $userid = $this->userid;//当前登录的用户
             // 判断视频是否收费或者用户是否为vip
-            $userpay = $this->is_fee($id,$userid,$data['is_fee'],$data['price'],$model['price']);
+            $userpay = $this->userpay($id,$userid);
             // 观看进度
-            $res['percentage'] = $this->himatch($userid,$id,$model['tables']);
+            // $res['percentage'] = $this->himatch($userid,$id,$model['tables']);
             // 是否收藏
             $res['is_collected'] = $this->collection($userid,$id,$model['tables']);
+            // 是否报名
+            $sign = Db::table('fa_match_user')->where("match_id = ".$id." AND user_id = ".$this->userid)->count();
+            if($sign !== '0'){
+                $res['sign'] = '1';
+            }
+        }else{
+            $userpay['vip'] = '0';
+            $res['is_collected'] = '0';
+            $res['sign'] = '0';
         }
-        
+        $res['vip'] = $userpay['vip'];
         // 评论
-        $comment = $this->comment($id,$model['tables'],$this->offset, $this->limit);
+        // $comment = $this->comment($id,$model['tables'],$this->offset, $this->limit);
         // 点击量更新
-        $data['view'] = $data['view'] + 1;
-        $update['view'] = $data['view'];
-        $this->model->where('id = '.$id)->update($update);
-        $res['comment'] = $comment;
+        // $data['view'] = $data['view'] + 1;
+        // $update['view'] = $data['view'];
+        // $this->model->where('id = '.$id)->update($update);
+        // $res['comment'] = $comment;
         // 排行榜
         // $rankings
         if($res){

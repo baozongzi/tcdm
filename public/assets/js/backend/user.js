@@ -10,6 +10,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     edit_url: 'user/edit',
                     del_url: 'user/del',
                     multi_url: 'user/multi',
+                    examine_url: 'user/examine',
                     table: 'user',
                 }
             });

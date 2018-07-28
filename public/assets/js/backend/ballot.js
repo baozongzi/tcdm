@@ -5,13 +5,13 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'story/index/',
-                    add_url: 'story/add/',
-                    edit_url: 'story/edit/',
-                    // del_url: 'story/del/',
-                    del_url: 'story/softDelete/',
-                    multi_url: 'story/multi/',
-                    table: 'story',
+                    index_url: 'ballot/index/',
+                    add_url: 'ballot/add/',
+                    edit_url: 'ballot/edit/',
+                    // del_url: 'ballot/del/',
+                    del_url: 'ballot/softDelete/',
+                    multi_url: 'ballot/multi/',
+                    table: 'ballot',
                 }
             });
 
@@ -26,10 +26,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {checkbox: true},
                         {field: 'id', title: __('Id'), operate:false},
-                        {field: 'thumb', title: __('缩略图'), operate:false, formatter: Table.api.formatter.image},
+                        // {field: 'thumb', title: __('缩略图'), operate:false, formatter: Table.api.formatter.image},
                         {field: 'title', title: __('title')},
-                        {field: 'inputtime', title: __('上传时间'),formatter: Table.api.formatter.datetime, operate: 'BETWEEN', 
-                        type: 'datetime', addclass: 'datetimepicker', data: 'data-date-format="YYYY-MM-DD"'},
+                        {field: 'price', title: __('价格')},
+                        // {field: 'inputtime', title: __('上传时间'),formatter: Table.api.formatter.datetime, operate: 'BETWEEN', 
+                        // type: 'datetime', addclass: 'datetimepicker', data: 'data-date-format="YYYY-MM-DD"'},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

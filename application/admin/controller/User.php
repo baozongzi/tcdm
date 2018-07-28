@@ -109,11 +109,20 @@ class User extends Backend
             if(input('posts') == '1'){
                 $data['is_ok'] = input('ok1');
                 $data['reason'] = input('reason1');
+
                 $res = Db::table('fa_u_examine_basics')->where('userid = '.$ids)->update($data);
+                if($data['is_ok'] = '1'){
+                    $us['normal_name'] = input('username');
+                    $us['sex'] = input('sex');
+                    $us['birthday'] = strtotime(input('birthday'));
+                    $us['intro'] = input('intro');
+                    Db::table('fa_user')->where('id = '.$ids)->update($us);
+                }
                 $arr = array(
                     'status'    =>  '200',
                     'message'   =>  '提交成功',
                     );
+                
             }
             if(input('posts') == '2'){
                 $data['is_ok'] = input('ok2');
@@ -144,14 +153,33 @@ class User extends Backend
             $user_video['video'] = base64_decode($user_video['video']);
             $user_video['video'] = base64_decode($user_video['video']);
             $this->view->assign("ids", $ids);
+            if(empty($user_bascic)){
+                $user_bascic['normal_name'] = '';
+                $user_bascic['sex'] = '';
+                $user_bascic['birthday'] = time();
+                $user_bascic['height'] = '';
+                $user_bascic['area'] = '';
+                $user_bascic['constellation'] = '';
+                $user_bascic['intro'] = '';
+                $user_bascic['is_ok'] = '';
+                $user_bascic['reason'] = '';
+            }
+
+            if(empty($user_photo['thumb'])){
+                $user_photo['thumb'] = '';
+                $user_photo['is_ok'] = '0';
+                $user_photo['reason'] = '';
+            }
+            if(empty($user_video['video'])){
+                $user_video['video'] = '';
+                $user_video['is_ok'] = '';
+                $user_video['reason'] = '';
+            }
             $this->view->assign("basics", $user_bascic);
             $this->view->assign("photos", $user_photo);
             $this->view->assign("video", $user_video);
             // $array = array('/uploads/20180609/8b4534fd77d2b37b7facd3010a67dd17.gif','/uploads/20180609/8b4534fd77d2b37b7facd3010a67dd17.gif','/uploads/20180609/8b4534fd77d2b37b7facd3010a67dd17.gif');
 
-            // echo "<pre>";
-            // print_r($user_photo);
-            // die;
             return $this->view->fetch('examine');
         }
         

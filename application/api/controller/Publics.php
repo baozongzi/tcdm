@@ -40,18 +40,22 @@ class Publics extends Api
             case '1':
                 $this->model = model("Hinterview");
                 $this->table = 'health_interview';
+                $this->tab = 'health';
                 break;
             case '2':
                 $this->model = model("Hstory");
                 $this->table = 'health_story';
+                $this->tab = 'health';
                 break;
             case '3':
                 $this->model = model("Hproduct");
                 $this->table = 'health_product';
+                $this->tab = 'health';
                 break;
             case '4':
                 $this->model = model("Hcommon");
                 $this->table = 'health_common';
+                $this->tab = 'health';
                 break;
             default:
                 
@@ -60,6 +64,7 @@ class Publics extends Api
         }else{
             $this->model = model($this->table);
             $this->table = $this->table;
+            $this->tab = $this->table;
         }
 
         // echo "<pre>";
@@ -83,13 +88,13 @@ class Publics extends Api
     }
 
     public function shows(){
-        
+
         $id = $this->row->vid;//视频id
         //数据详情
         if(isset($this->cid)){
-            $data = $this->init_thumbs($this->model->where('id = '.$id.' and cid = '.$this->row->cid)->field('id,title,description,content,view,thumb,is_fee,price,video,artist,team')->find());
+            $data = $this->init_thumbs(Db::table('fa_'.$this->table)->where('id = '.$id.' and cid = '.$this->row->cid)->field('id,title,description,content,view,thumb,is_fee,price,video,artist,team')->find());
         }else{
-            $data = $this->init_thumbs($this->model->where('id = '.$id)->field('id,title,description,content,view,thumb,is_fee,price,video,artist,team')->find());
+            $data = $this->init_thumbs(Db::table('fa_'.$this->table)->where('id = '.$id)->field('id,title,description,content,view,thumb,is_fee,price,video,artist,team')->find());
         }
         
         // 一级栏目查询
@@ -116,20 +121,38 @@ class Publics extends Api
         $data['view'] = $data['view'] + 1;
         $update['view'] = $data['view'];
         $this->model->where('id = '.$id)->update($update);
+        $history['userid'] = $this->userid;
+        $history['vid'] = $res['id'];
+        $history['tables'] = $this->table;
+        $history['title'] = $res['title'];
+        $history['updatetime'] = time();
+        if(!Db::table('fa_history')->where('userid = '.$this->userid." AND vid = ".$res['id']." AND tables = '".$this->table."'")->find()){
+            Db::table('fa_history')->insert($history);
+        }
+        
         $res['comment'] = $comment;
         if($res){
-            $status = '1';
-            $mes = '获取成功😏';
-            $res = $this->json_echo($status,$mes,$res);
-            return $res;
+            return $this->json_echo('1','获取成功😏',$res);
             // return api_json('1', 'OK', $res);
         }else{
-            $err['id'] = $data['id'];
-            $status = '1';
-            $mes = '获取成功😏';
-            $res = $this->json_echo($status,$mes,$err);
-            return $res;
+            return $this->json_echo('0','内容飞走了😏',array());
             // return api_json('0', 'ERROR', $err);
+        }
+    }
+
+    // 收藏
+    public function collectioned(){
+        $data = $this->collectionsed($this->row,$this->table,$this->model,$models = $this->tab);
+        if($data == 0){
+            $status = '0';
+            $mes = '已收藏过了😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
+        }else{
+            $status = '1';
+            $mes = '成功😏';
+            $res = $this->json_echo($status,$mes,$data);
+            return $res;
         }
     }
 

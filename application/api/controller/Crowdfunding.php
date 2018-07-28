@@ -94,7 +94,7 @@ class Crowdfunding extends Api
             if($result[$re]['success'] == '0.00'){
                 $result[$re]['percentage'] = '0.00';
             }else{
-                $result[$re]['percentage'] = number_format($result[$re]['success']/$result[$re]['total_money'],3);
+                $result[$re]['percentage'] = number_format($result[$re]['success']/$result[$re]['total_money'],2) * 100 . '%';
             }
         }
         //图片格式化
@@ -128,7 +128,7 @@ class Crowdfunding extends Api
         if($data['success'] == '0.00'){
             $data['percentage'] = '0.00';
         }else{
-            $data['percentage'] = number_format($data['success']/$data['total_money'],3);
+            $data['percentage'] = number_format($data['success']/$data['total_money'],2) * 100 . '%';
         }
         // 一级栏目查询
         $model = $this->AuthRule->where("tables = '".$this->table."'")->find();

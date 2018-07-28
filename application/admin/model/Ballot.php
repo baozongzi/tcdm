@@ -4,9 +4,9 @@ namespace app\admin\model;
 
 use think\Model;
 
-class Diamond extends Model
+class Ballot extends Model
 {
     // 表名
-    protected $name = 'diamond';
+    protected $name = 'ballot';
     
 }
