@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2017 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
@@ -343,26 +343,28 @@ abstract class Connection
      */
     public function query($sql, $bind = [], $master = false, $pdo = false)
     {
+        $sql = str_replace('__PREFIX__', C('database.prefix'), $sql); // 替换前缀
         $this->initConnect($master);
         if (!$this->linkID) {
             return false;
         }
 
+        $master && $sql = '/*master*/'.$sql;
         // 记录SQL语句
         $this->queryStr = $sql;
         if ($bind) {
             $this->bind = $bind;
         }
 
-        // 释放前次的查询结果
-        if (!empty($this->PDOStatement)) {
-            $this->free();
-        }
-
         Db::$queryTimes++;
         try {
             // 调试开始
             $this->debug(true);
+
+            // 释放前次的查询结果
+            if (!empty($this->PDOStatement)) {
+                $this->free();
+            }
             // 预处理
             if (empty($this->PDOStatement)) {
                 $this->PDOStatement = $this->linkID->prepare($sql);
@@ -385,11 +387,19 @@ abstract class Connection
             if ($this->isBreak($e)) {
                 return $this->close()->query($sql, $bind, $master, $pdo);
             }
+            echo '错误语句:'. $sql;
             throw new PDOException($e, $this->config, $this->getLastsql());
+        } catch (\Throwable $e) {
+            if ($this->isBreak($e)) {
+                return $this->close()->query($sql, $bind, $master, $pdo);
+            }
+	    echo '错误语句:'. $sql;
+            throw $e;
         } catch (\Exception $e) {
             if ($this->isBreak($e)) {
                 return $this->close()->query($sql, $bind, $master, $pdo);
             }
+	    echo '错误语句:'. $sql;
             throw $e;
         }
     }
@@ -405,6 +415,7 @@ abstract class Connection
      */
     public function execute($sql, $bind = [])
     {
+        $sql = str_replace('__PREFIX__', C('database.prefix'), $sql); // 替换前缀
         $this->initConnect(true);
         if (!$this->linkID) {
             return false;
@@ -416,15 +427,15 @@ abstract class Connection
             $this->bind = $bind;
         }
 
-        //释放前次的查询结果
-        if (!empty($this->PDOStatement) && $this->PDOStatement->queryString != $sql) {
-            $this->free();
-        }
-
         Db::$executeTimes++;
         try {
             // 调试开始
             $this->debug(true);
+
+            //释放前次的查询结果
+            if (!empty($this->PDOStatement) && $this->PDOStatement->queryString != $sql) {
+                $this->free();
+            }
             // 预处理
             if (empty($this->PDOStatement)) {
                 $this->PDOStatement = $this->linkID->prepare($sql);
@@ -448,11 +459,19 @@ abstract class Connection
             if ($this->isBreak($e)) {
                 return $this->close()->execute($sql, $bind);
             }
+            echo '错误语句:'. $sql;
             throw new PDOException($e, $this->config, $this->getLastsql());
+        } catch (\Throwable $e) {
+            if ($this->isBreak($e)) {
+                return $this->close()->execute($sql, $bind);
+            }
+	    echo '错误语句:'. $sql;
+            throw $e;
         } catch (\Exception $e) {
             if ($this->isBreak($e)) {
                 return $this->close()->execute($sql, $bind);
             }
+	    echo '错误语句:'. $sql;
             throw $e;
         }
     }
@@ -648,6 +667,11 @@ abstract class Connection
             }
             throw $e;
         } catch (\Exception $e) {
+            if ($this->isBreak($e)) {
+                return $this->close()->startTrans();
+            }
+            throw $e;
+        } catch (\Error $e) {
             if ($this->isBreak($e)) {
                 return $this->close()->startTrans();
             }

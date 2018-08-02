@@ -32,21 +32,14 @@ $client = new \JPush\Client($app_key, $master_secret, $log_path);
 $push = $client->push();
 ```
 
-通过 [JPush Push API](https://docs.jiguang.cn/jpush/server/push/rest_api_v3_push/) 我们知道，一个 PushPayload 是由以下几个部分构成的：
+通过 [JPush Push API](http://docs.jiguang.cn/server/rest_api_v3_push) 我们知道，一个 PushPayload 是由以下几个部分构成的：
 
-- Cid
 - Platform
 - Audience
 - Notification
 - Message
 - SmsContent
 - Options
-
-#### Cid
-
-```php
-$push->setCid($cid);
-```
 
 #### Platform
 
@@ -70,7 +63,7 @@ $push->addTag('tag1');
 $push->addTag(['tag1', 'tag2']);
 ```
 
-其他诸如 `addAlias()`, `addRegistrationId()`, `addTagAnd()`, `addTagNot()`, `addSegmentId()`, `addAbtest()` 的使用方法与 `addTag()` 类似，在此不做赘述。
+其他诸如 `addAlias()`, `addRegistrationId()`, `addTagAnd()` 的使用方法与 `addTag()` 类似，在此不做赘述。
 
 #### Notification
 
@@ -200,8 +193,7 @@ $push->setSmsMessage($content, $delay_time)
 | sendno | 表示推送序号，纯粹用来作为 API 调用标识，API 返回时被原样返回，以方便 API 调用方匹配请求与返回 |
 | time_to_live | 表示离线消息保留时长(秒)，推送当前用户不在线时，为该用户保留多长时间的离线消息，以便其上线时再次推送。默认 86400 （1 天），最长 10 天。设置为 0 表示不保留离线消息，只有推送当前在线的用户可以收到 |
 | override_msg_id | 表示要覆盖的消息ID，如果当前的推送要覆盖之前的一条推送，这里填写前一条推送的 msg_id 就会产生覆盖效果 |
-| apns_production | 表示 APNs 是否生产环境，True 表示推送生产环境，False 表示要推送开发环境；如果不指定则默认为推送开发环境 |
-| apns_collapse_id | APNs 新通知如果匹配到当前通知中心有相同 apns-collapse-id 字段的通知，则会用新通知内容来更新它，并使其置于通知中心首位；collapse id 长度不可超过 64 bytes|
+| apns_production | 表示APNs是否生产环境，True 表示推送生产环境，False 表示要推送开发环境；如果不指定则默认为推送生产环境 |
 | big_push_duration | 表示定速推送时长(分钟)，又名缓慢推送，把原本尽可能快的推送速度，降低下来，给定的 n 分钟内，均匀地向这次推送的目标用户推送。最大值为1400.未设置则不是定速推送 |
 
 #### Common Method
@@ -216,7 +208,6 @@ $push->send();
 
 ```php
 $response = $push()
-    ->setCid('xxxxxx')
     ->setPlatform(['ios', 'android'])
     ->addTag(['tag1', 'tag2'])
     ->setNotificationAlert('Hello, JPush')
@@ -238,7 +229,6 @@ $response = $push()
     ->send();
 
 // OR 也可以提前准备好所有的参数，然后链式调用，这样代码可读性更好一点
-$cid = 'xxxxxx';
 $platform = array('ios', 'android');
 $alert = 'Hello JPush';
 $tag = array('tag1', 'tag2');
@@ -276,8 +266,7 @@ $options = array(
     'override_msg_id' => 100,
     'big_push_duration' => 100
 );
-$response = $push->setCid($cid)
-    ->setPlatform($platform)
+$response = $push->setPlatform($platform)
     ->addTag($tag)
     ->addRegistrationId($regId)
     ->iosNotification($alert, $ios_notification)
@@ -285,12 +274,6 @@ $response = $push->setCid($cid)
     ->message($content, $message)
     ->options($options)
     ->send();
-```
-
-#### 获取 Cid
-
-```php
-$push->getCid($count = 1, $type = 'push');
 ```
 
 ## Report API
@@ -446,7 +429,7 @@ $schedule->deleteSchedule($schedule_id);
 
 ## Exception Handle
 
-当 API 请求发生错误时，SDK 将抛出异常，Pushpayload 具体错误代码请参考[ API 错误代码表](https://docs.jiguang.cn/jpush/server/push/rest_api_v3_push/#_19)。
+当 API 请求发生错误时，SDK 将抛出异常，Pushpayload 具体错误代码请参考[ API 错误代码表](http://docs.jiguang.cn/server/rest_api_v3_push/#http)。
 PHP SDK 主要抛出两个异常 `\JPush\Exceptions\APIConnectionException` 和 `\JPush\Exceptions\APIRequestException` 分别对应请求连接产生的异常和请求响应的异常。
 这两种异常都需要捕获，为简单起见，也可以捕获他们的父类异常 `JPush\Exceptions\JPushException`（见 README）。另外 APIRequestException 异常还提供其他方法供开发者调用。
 

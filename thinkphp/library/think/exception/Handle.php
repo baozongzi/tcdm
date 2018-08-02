@@ -175,7 +175,12 @@ class Handle
 
         ob_start();
         extract($data);
+        
+        if(true == Config::get('app_debug'))
         include Config::get('exception_tmpl');
+        else 
+        include Config::get('error_tmpl');	
+        
         // 获取并清空缓存
         $content  = ob_get_clean();
         $response = new Response($content, 'html');

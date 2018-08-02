@@ -1,153 +1,152 @@
 <?php
-
-use app\common\model\Category;
-use fast\Form;
-use fast\Tree;
-use think\Db;
+/**
+ * tpshop
+ * ============================================================================
+ * 版权所有 2015-2027 深圳搜豹网络科技有限公司，并保留所有权利。
+ * 网站地址: http://www.tp-shop.cn
+ * ----------------------------------------------------------------------------
+ * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和使用 .
+ * 不允许对程序代码以任何形式任何目的的再发布。
+ * ============================================================================
+ * Author: 当燃
+ * Date: 2015-09-09
+ */
 
 /**
- * 生成下拉列表
- * @param string $name
- * @param mixed $options
- * @param mixed $selected
- * @param mixed $attr
- * @return string
+ * 管理员操作记录
+ * @param $log_info string 记录信息
  */
-function build_select($name, $options, $selected = [], $attr = [])
-{
-    $options = is_array($options) ? $options : explode(',', $options);
-    $selected = is_array($selected) ? $selected : explode(',', $selected);
-    return Form::select($name, $options, $selected, $attr);
+function adminLog($log_info){
+    $add['log_time'] = time();
+    $add['admin_id'] = session('admin_id');
+    $add['log_info'] = $log_info;
+    $add['log_ip'] = request()->ip();
+    $add['log_url'] = request()->baseUrl() ;
+    M('admin_log')->add($add);
+}
+
+
+/**
+ * 平台支出记录
+ * @param $data
+ */
+function expenseLog($data){
+	$data['addtime'] = time();
+	$data['admin_id'] = session('admin_id');
+	M('expense_log')->add($data);
+}
+ 
+function getAdminInfo($admin_id){
+	return D('admin')->where("admin_id", $admin_id)->find();
+}
+
+function tpversion()
+{     
+   //在线升级系统
+    if(!empty($_SESSION['isset_push']))
+        return false;    
+    $_SESSION['isset_push'] = 1;    
+    error_reporting(0);//关闭所有错误报告
+    $app_path = dirname($_SERVER['SCRIPT_FILENAME']).'/';
+    $version_txt_path = $app_path.'/application/admin/conf/version.php';
+    $curent_version = file_get_contents($version_txt_path);
+    
+    $vaules = array(            
+            'domain'=>$_SERVER['HTTP_HOST'], 
+            'last_domain'=>$_SERVER['HTTP_HOST'], 
+            'key_num'=>$curent_version, 
+            'install_time'=>INSTALL_DATE, 
+            'cpu'=>'0001',
+            'mac'=>'0002',
+            'serial_number'=>SERIALNUMBER,
+            );     
+     $url = "http://service.tp-shop.cn/index.php?m=Home&c=Index&a=user_push&".http_build_query($vaules);
+     stream_context_set_default(array('http' => array('timeout' => 3)));
+     file_get_contents($url);       
+}
+ 
+/**
+ * 面包屑导航  用于后台管理
+ * 根据当前的控制器名称 和 action 方法
+ */
+function navigate_admin()
+{            
+    $navigate = include APP_PATH.'admin/conf/navigate.php';
+    $location = strtolower('Admin/'.CONTROLLER_NAME);
+    $arr = array(
+        '后台首页'=>'javascript:void();',
+        $navigate[$location]['name']=>'javascript:void();',
+        $navigate[$location]['action'][ACTION_NAME]=>'javascript:void();',
+    );
+    return $arr;
 }
 
 /**
- * 生成单选按钮组
- * @param string $name
- * @param array $list
- * @param mixed $selected
- * @return string
+ * 导出excel
+ * @param $strTable	表格内容
+ * @param $filename 文件名
  */
-function build_radios($name, $list = [], $selected = null)
+function downloadExcel($strTable,$filename)
 {
-    $html = [];
-    $selected = is_null($selected) ? key($list) : $selected;
-    $selected = is_array($selected) ? $selected : explode(',', $selected);
-    foreach ($list as $k => $v)
-    {
-        $html[] = sprintf(Form::label("{$name}-{$k}", "%s {$v}"), Form::radio($name, $k, in_array($k, $selected), ['id' => "{$name}-{$k}"]));
-    }
-    return '<div class="radio">' . implode(' ', $html) . '</div>';
+	header("Content-type: application/vnd.ms-excel");
+	header("Content-Type: application/force-download");
+	header("Content-Disposition: attachment; filename=".$filename."_".date('Y-m-d').".xls");
+	header('Expires:0');
+	header('Pragma:public');
+	echo '<html><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />'.$strTable.'</html>';
 }
 
 /**
- * 生成复选按钮组
- * @param string $name
- * @param array $list
- * @param mixed $selected
- * @return string
+ * 格式化字节大小
+ * @param  number $size      字节数
+ * @param  string $delimiter 数字和单位分隔符
+ * @return string            格式化后的带单位的大小
  */
-function build_checkboxs($name, $list = [], $selected = null)
-{
-    $html = [];
-    $selected = is_null($selected) ? [] : $selected;
-    $selected = is_array($selected) ? $selected : explode(',', $selected);
-    foreach ($list as $k => $v)
-    {
-        $html[] = sprintf(Form::label("{$name}-{$k}", "%s {$v}"), Form::checkbox($name, $k, in_array($k, $selected), ['id' => "{$name}-{$k}"]));
-    }
-    return '<div class="checkbox">' . implode(' ', $html) . '</div>';
+function format_bytes($size, $delimiter = '') {
+	$units = array('B', 'KB', 'MB', 'GB', 'TB', 'PB');
+	for ($i = 0; $size >= 1024 && $i < 5; $i++) $size /= 1024;
+	return round($size, 2) . $delimiter . $units[$i];
 }
 
 /**
- * 生成分类下拉列表框
- * @param string $name
- * @param string $type
- * @param mixed $selected
- * @param array $attr
- * @return string
+ * 根据id获取地区名字
+ * @param $regionId id
  */
-function build_category_select($name, $type, $selected = null, $attr = [], $header = [])
-{
-    $tree = Tree::instance();
-    $tree->init(Category::getCategoryArray($type), 'pid');
-    $categorylist = $tree->getTreeList($tree->getTreeArray(0), 'name');
-    $categorydata = $header ? $header : [];
-    foreach ($categorylist as $k => $v)
-    {
-        $categorydata[$v['id']] = $v['name'];
-    }
-    $attr = array_merge(['id' => "c-{$name}", 'class' => 'form-control selectpicker'], $attr);
-    return build_select($name, $categorydata, $selected, $attr);
+function getRegionName($regionId){
+    $data = M('region')->where(array('id'=>$regionId))->field('name')->find();
+    return $data['name'];
 }
 
-/**
- * 生成表格操作按钮栏
- * @param array $btns 按钮组
- * @param array $attr 按钮属性值
- * @return string
- */
-function build_toolbar($btns = NULL, $attr = [])
-{
-    $auth = \app\admin\library\Auth::instance();
-    $controller = str_replace('.', '/', strtolower(think\Request::instance()->controller()));
-    $btns = $btns ? $btns : ['refresh', 'add', 'edit', 'del', 'import'];
-    $btns = is_array($btns) ? $btns : explode(',', $btns);
-    $index = array_search('delete', $btns);
-    if ($index !== FALSE)
-    {
-        $btns[$index] = 'del';
-    }
-    $btnAttr = [
-        'refresh' => ['javascript:;', 'btn btn-primary btn-refresh', 'fa fa-refresh', '', __('Refresh')],
-        'add'     => ['javascript:;', 'btn btn-success btn-add', 'fa fa-plus', __('Add'), __('Add')],
-        'edit'    => ['javascript:;', 'btn btn-success btn-edit btn-disabled disabled', 'fa fa-pencil', __('Edit'), __('Edit')],
-        'del'     => ['javascript:;', 'btn btn-danger btn-del btn-disabled disabled', 'fa fa-trash', __('Delete'), __('Delete')],
-        'import'  => ['javascript:;', 'btn btn-danger btn-import', 'fa fa-upload', __('Import'), __('Import')],
-    ];
-    $btnAttr = array_merge($btnAttr, $attr);
-    $html = [];
-    foreach ($btns as $k => $v)
-    {
-        //如果未定义或没有权限
-        if (!isset($btnAttr[$v]) || ($v !== 'refresh' && !$auth->check("{$controller}/{$v}")))
-        {
-            continue;
-        }
-        list($href, $class, $icon, $text, $title) = $btnAttr[$v];
-        $extend = $v == 'import' ? 'id="btn-import-' . \fast\Random::alpha() . '" data-url="ajax/upload" data-mimetype="csv,xls,xlsx" data-multiple="false"' : '';
-        $html[] = '<a href="' . $href . '" class="' . $class . '" title="' . $title . '" ' . $extend . '><i class="' . $icon . '"></i> ' . $text . '</a>';
-    }
-    return implode(' ', $html);
+function getMenuArr(){
+	$menuArr = include APP_PATH.'admin/conf/menu.php';
+	$act_list = session('act_list');
+	if($act_list != 'all' && !empty($act_list)){
+		$right = M('system_menu')->where("id in ($act_list)")->cache(true)->getField('right',true);
+        $role_right = '';
+		foreach ($right as $val){
+			$role_right .= $val.',';
+		}
+		foreach($menuArr as $k=>$val){
+			foreach ($val['child'] as $j=>$v){
+				foreach ($v['child'] as $s=>$son){
+					if(strpos($role_right,$son['op'].'@'.$son['act']) === false){
+						unset($menuArr[$k]['child'][$j]['child'][$s]);//过滤菜单
+					}
+				}
+			}
+		}
+		foreach ($menuArr as $mk=>$mr){
+			foreach ($mr['child'] as $nk=>$nrr){
+				if(empty($nrr['child'])){
+					unset($menuArr[$mk]['child'][$nk]);
+				}
+			}
+		}
+	}
+	return $menuArr;
 }
 
-/**
- * 生成页面Heading
- *
- * @param string $path 指定的path
- * @return string
- */
-function build_heading($path = NULL, $container = TRUE)
-{
-    $title = $content = '';
-    if (is_null($path))
-    {
-        $action = request()->action();
-        $controller = str_replace('.', '/', request()->controller());
-        $path = strtolower($controller . ($action && $action != 'index' ? '/' . $action : ''));
-    }
-    // 根据当前的URI自动匹配父节点的标题和备注
-    $data = Db::name('auth_rule')->where('name', $path)->field('title,remark')->find();
-    if ($data)
-    {
-        $title = __($data['title']);
-        $content = __($data['remark']);
-    }
-    if (!$content)
-        return '';
-    $result = '<div class="panel-lead"><em>' . $title . '</em>' . $content . '</div>';
-    if ($container)
-    {
-        $result = '<div class="panel-heading">' . $result . '</div>';
-    }
-    return $result;
+
+function respose($res){
+	exit(json_encode($res));
 }

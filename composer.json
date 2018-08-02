@@ -1,31 +1,26 @@
 {
-    "name": "karsonzhang/fastadmin",
-    "description": "the fastest admin framework",
+    "name": "topthink/think",
+    "description": "TPshop2.0",
     "type": "project",
     "keywords": [
-        "fastadmin",
-        "thinkphp"
+        "framework",
+        "thinkphp",
+        "ORM"
     ],
-    "homepage": "http://www.fastadmin.net/",
+    "homepage": "http://thinkphp.cn/",
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "karson",
-            "email": "karsonzhang@163.com"
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "topthink/framework": "^5.0",
-        "overtrue/wechat": "~3.1",
-        "endroid/qrcode": "^1.9",
-        "topthink/think-captcha": "^1.0",
-        "mtdowling/cron-expression": "^1.2",
-        "phpmailer/phpmailer": "^5.2",
-        "karsonzhang/fastadmin-addons": "dev-master",
-        "overtrue/pinyin": "~3.0",
-        "phpoffice/phpexcel": "^1.8",
-        "jpush/jpush": "^3.5"
+        "topthink/framework": "^5.0"
+    },
+    "extra": {
+        "think-path": "thinkphp"
     },
     "config": {
         "preferred-install": "dist"

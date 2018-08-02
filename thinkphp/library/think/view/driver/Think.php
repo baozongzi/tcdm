@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2017 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2018 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
@@ -77,6 +77,11 @@ class Think
         }
         // 模板不存在 抛出异常
         if (!is_file($template)) {
+			
+			if(strstr($template,'pre_sell_list')){
+				header("Content-type: text/html; charset=utf-8");
+				exit('要使用预售功能请联系TPshop官网客服,官网地址 www.tp-shop.cn');
+			}
             throw new TemplateNotFoundException('template not exists:' . $template, $template);
         }
         // 记录视图信息

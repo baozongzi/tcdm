@@ -1,5 +1,4 @@
 <?php
-
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
@@ -9,22 +8,20 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+//
+//return [
+//    '__pattern__' => [
+//        'name' => '\w+',
+//    ],
+//    '[hello]'     => [
+//        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
+//        ':name' => ['index/hello', ['method' => 'post']],
+//    ],
+//    //'goodsInfo/[:id]' => ['Home/Goods/goodsInfo',['method' => 'get', 'ext' => 'html'],'cache'=>3600]
+//    //Home/Goods/goodsInfo/id/104.html
+//];
+//use think\Route;
+// 注册路由到index模块的News控制器的read操作
+//Route::get('goodsInfo/:id','home/goods/goodsInfo',['cache'=>['Home/Goods/goodsInfo',300]]);// 访问方式 http://www.tpshop2.0.com/goodsInfo/77.html
 
-//如果有定义绑定后台模块则禁用路由规则 
-if (\think\Route::getBind('module') == 'admin'){
-    return [];
-}
-
-return [
-    //别名配置,别名只能是映射到控制器且访问时必须加上请求的方法
-    '__alias__'   => [
-    ],
-    //变量规则
-    '__pattern__' => [
-    ],
-//        域名绑定到模块
-//        '__domain__'  => [
-//            'admin' => 'admin',
-//            'api'   => 'api',
-//        ],
-];
+// http://www.tpshop2.0.com/home/goods/goodsInfo/id/77.html

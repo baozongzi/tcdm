@@ -1,7 +1,0 @@
-
-    protected static function init()
-    {
-        self::afterInsert(function ($row) {
-            $row->save(['{%order%}' => $row['id']]);
-        });
-    }
